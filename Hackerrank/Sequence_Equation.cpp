@@ -4,58 +4,43 @@ using namespace std;
 
 vector<string> split_string(string);
 
-// Complete the circularArrayRotation function below.
-vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries) {
+// Complete the permutationEquation function below.
+vector<int> permutationEquation(vector<int> p) {
     
     vector<int> ans;
-    int n=a.size();
-    
-    for(int m:queries){
-        ans.push_back(a[(n - (k % n)+ m) % n]);
+    for(int i=0;i<p.size();i++){
+        int index=find(p.begin(),p.end(),i+1)-p.begin();
+        index=find(p.begin(),p.end(),index+1)-p.begin();
+        
+        ans.push_back(index+1);
     }
     
     return ans;
+
 }
 
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
 
-    string nkq_temp;
-    getline(cin, nkq_temp);
+    int n;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    vector<string> nkq = split_string(nkq_temp);
+    string p_temp_temp;
+    getline(cin, p_temp_temp);
 
-    int n = stoi(nkq[0]);
+    vector<string> p_temp = split_string(p_temp_temp);
 
-    int k = stoi(nkq[1]);
-
-    int q = stoi(nkq[2]);
-
-    string a_temp_temp;
-    getline(cin, a_temp_temp);
-
-    vector<string> a_temp = split_string(a_temp_temp);
-
-    vector<int> a(n);
+    vector<int> p(n);
 
     for (int i = 0; i < n; i++) {
-        int a_item = stoi(a_temp[i]);
+        int p_item = stoi(p_temp[i]);
 
-        a[i] = a_item;
+        p[i] = p_item;
     }
 
-    vector<int> queries(q);
-
-    for (int i = 0; i < q; i++) {
-        int queries_item;
-        cin >> queries_item;
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-        queries[i] = queries_item;
-    }
-
-    vector<int> result = circularArrayRotation(a, k, queries);
+    vector<int> result = permutationEquation(p);
 
     for (int i = 0; i < result.size(); i++) {
         fout << result[i];
