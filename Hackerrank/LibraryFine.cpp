@@ -4,7 +4,6 @@ using namespace std;
 
 vector<string> split_string(string);
 
-// Complete the libraryFine function below.
 int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2) {
     if(y1<y2){
         return 0;
