@@ -24,11 +24,14 @@ vector<int>::iterator minElementRange(vector<int> arr){
 vector<int> cutTheSticks(vector<int> arr) {
     sort(arr.begin(),arr.end(),compareInt);
     vector<int> s;
+    int len=arr.size();
+    s.push_back(len);
     
-    while(arr.size()>0){
-        s.push_back(arr.size());
-        vector<int>::iterator index=minElementRange(arr);
-        s.erase(index,arr.end());
+    for(int i=1;i<len;i++){
+        if(arr[len-i]!=arr[len-i-1]){
+            // cout<<arr[len-i];
+            s.push_back(len-i);
+        }
     }
     
     return s;
