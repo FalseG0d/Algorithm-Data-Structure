@@ -16,21 +16,37 @@ vector<string> split(const string &);
  */
 
 int nonDivisibleSubset(int k, vector<int> s) {
-    set<int> sum;
+    // set<int> sum;
+    // int len=s.size();
+    // for(int i=0;i<len-1;i++){
+    //     for(int j=i+1;j<len;j++){
+    //         if((s[i]+s[j])%k!=0){
+    //             sum.insert(s[i]);
+    //             sum.insert(s[j]);
+    //             // cout<<s[i]<<" "<<s[j]<<"\n";
+    //         }else{
+    //             if(sum.find(s[i])!=sum.end())
+    //                 sum.erase(sum.find(s[i]));
+    //         }
+    //     }
+    // }
+    int sum=0;
+    
+    for(int i=0;i<s.size();i++){
+        s[i]%=k;
+    }
+    
     int len=s.size();
+    
     for(int i=0;i<len-1;i++){
         for(int j=i+1;j<len;j++){
-            if((s[i]+s[j])%k!=0){
-                sum.insert(s[i]);
-                sum.insert(s[j]);
-                // cout<<s[i]<<" "<<s[j]<<"\n";
-            }else{
-                if(sum.find(s[i])!=sum.end())
-                    sum.erase(sum.find(s[i]));
+            if((s[i]+s[j])==k){
+                sum++;
             }
         }
     }
-    return sum.size();
+    
+    return sum;
 }
 
 int main()
