@@ -8,28 +8,20 @@ using namespace std;
 //User function template for C++
 class Solution{
 public:
-    static void rRotate(int arr[],int n,int pos){
-        for(int i=n-1;i>pos;i--){
-            arr[i]=arr[i-1];
-        }
-    }
-    static void lRotate(int arr[],int n,int pos){
-        for(int i=pos;i<n;i++){
-            arr[i]=arr[i+1];
-        }
-    }
 	void merge(int arr1[], int arr2[], int n, int m) {
-	    // code here
-	    for(int i=0;i<n;i++){
-	        for(int j=0;j<m;j++){
-	            if(arr1[i]>arr2[j]){
-	                int temp=arr1[i];
-	                arr1[i]=arr2[j];
-	                arr2[j]=temp;
-	            }
-	        }
-	    }
-	}
+    int i=n-1,j=0;
+    while(i>=0 && j<m) {
+        if(arr1[i]>arr2[j])
+        {
+            swap(arr1[i],arr2[j]);
+        }
+        i--;
+        j++;
+    }
+    
+    sort(arr1,arr1+n);
+    sort(arr2,arr2+m);
+    }
 };
 
 // { Driver Code Starts.
