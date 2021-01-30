@@ -20,11 +20,6 @@ int main()
     return 0;
 }// } Driver Code Ends
 
-
-// arr[] : the input array
-// N : size of the array arr[]
-
-// return the length of the longest subsequene of consecutive integers
 int findLongestConseqSubseq(int arr[], int N)
 {
   //Your code here
