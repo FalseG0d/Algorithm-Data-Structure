@@ -7,6 +7,9 @@ using namespace std;
  // } Driver Code Ends
 
 
+
+
+
    
 
 // function to find the trapped water in between buildings
@@ -14,24 +17,16 @@ using namespace std;
 // n: size of array
 int trappingWater(int arr[], int n){
     // Your code here
-    int*temp=arr;
-    set<int>s(arr,arr+n);
-    auto itr=s.end();
-    --itr;
-    --itr;
-    int height=*itr;
-    
     int sum=0;
-    for(int i=0;i<n;i++){
-        int level=height-temp[i];
-        
-        if(level>0&&){
-            sum+=level;
-        }
+    float*slope=new float[n];
+    
+    for(int i=0;i<n-1;i++){
+        slope[i]=(arr[i+1]-arr[i]);
     }
     
     return sum;
 }
+
 
 // { Driver Code Starts.
 
