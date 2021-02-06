@@ -17,14 +17,28 @@ using namespace std;
 // n: size of array
 int trappingWater(int arr[], int n){
     // Your code here
-    int sum=0;
-    float*slope=new float[n];
+    int left=0,right=n-1;
+    int leftmax=0,rightmax=0;
+    int res=0;
+    while(left<=right){
     
-    for(int i=0;i<n-1;i++){
-        slope[i]=(arr[i+1]-arr[i]);
+        if(arr[left]<=arr[right]){
+            if(arr[left]>=leftmax)
+                leftmax=arr[left];
+            else
+                res+=leftmax-arr[left];
+            left++;
+        }
+        else{
+            if(arr[right]>=rightmax)
+                rightmax=arr[right];
+            else
+                res+=rightmax-arr[right];
+            right--;
+        }
     }
     
-    return sum;
+    return res;
 }
 
 
