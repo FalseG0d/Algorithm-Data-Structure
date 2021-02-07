@@ -3,42 +3,34 @@
 
 using namespace std;
 
-
- // } Driver Code Ends
-
-
-
-
-
-   
+// } Driver Code Ends
 
 // function to find the trapped water in between buildings
 // arr: input array
 // n: size of array
+
 int trappingWater(int arr[], int n){
-    // Your code here
     int left=0,right=n-1;
-    int leftmax=0,rightmax=0;
-    int res=0;
-    while(left<=right){
+    int ret=0;
+    int leftMax=0,rightMax=0;
     
-        if(arr[left]<=arr[right]){
-            if(arr[left]>=leftmax)
-                leftmax=arr[left];
-            else
-                res+=leftmax-arr[left];
-            left++;
-        }
-        else{
-            if(arr[right]>=rightmax)
-                rightmax=arr[right];
-            else
-                res+=rightmax-arr[right];
+    while(left<=right){
+        if(arr[left]>arr[right]){
+            if(arr[right]>rightMax){
+                rightMax=arr[right];
+            }
+            ret+=rightMax-arr[right];
             right--;
+        }else{
+            if(arr[left]>leftMax){
+                leftMax=arr[left];
+            }
+            ret+=leftMax-arr[left];
+            left++;
         }
     }
     
-    return res;
+    return ret;
 }
 
 
@@ -62,8 +54,7 @@ int main(){
         for(int i =0;i<n;i++){
             cin >> a[i];            
         }
-        
-        //calling trappingWater() function
+        //calling trappingWater() function 
         cout << trappingWater(a, n) << endl;
         
     }
