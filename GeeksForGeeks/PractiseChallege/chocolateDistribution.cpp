@@ -2,27 +2,32 @@
 using namespace std;
 
 int chocolateDist(int n,int*arr,int m){
-    int res;
+    int res=INT_MAX;
     
-    int avg=0;
-    for(int i=0;i<n;i++){
-        avg+=arr[i];
-    }
+    // int avg=0;
+    // for(int i=0;i<n;i++){
+    //     avg+=arr[i];
+    // }
     
-    avg/=n;
+    // avg/=n;
     
-    for(int i=0;i<n;i++){
-        arr[i]-=avg;
-        arr[i]=max(arr[i],-arr[i]);
-    }
+    // for(int i=0;i<n;i++){
+    //     arr[i]-=avg;
+    //     arr[i]=max(arr[i],-arr[i]);
+    // }
     
     sort(arr,arr+n);
     
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-    }cout<<"\n";
+    // for(int i=0;i<n;i++){
+    //     cout<<arr[i]<<" ";
+    // }cout<<"\n";
     
-    res=arr[m-1]-arr[0];
+    for(int i=0;i<=n-m;i++){
+        res=min(res,arr[i+m-1]-arr[i]);
+        // cout<<res<<" ";
+    }//cout<<"\n";
+    
+    // res=arr[m-1]-arr[0];
     
     return res;
 }
