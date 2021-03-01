@@ -2,30 +2,34 @@
 using namespace std;
 
 vector<int> nearestGreaterToRight(int arr[],int n){
-   vector<int> res;
-   stack<int>s;
-
-   for(int i=n-1;i>=0;i--){
-       if(s.empty()){
-           res.push_back(-1);
-       }else{
-            while(!s.empty()){
-                if(s.top()<=arr[i])
-                    s.pop();
-                else
-                    break;
-            }
+		vector<int>res;
+        stack<int>s;
+    
+        for(int i=n-1;i>=0;i--){
             if(s.empty()){
                 res.push_back(-1);
-                }else{
-                res.push_back(s.top());
+                s.push(arr[i]);
+            }else{
+                while(!s.empty()){
+                    if(s.top()<=arr[i])
+                        s.pop();
+                    else
+                        break;
                 }
-       }
-       s.push(arr[i]);
-   }
-
-   return res;
-}
+                if(s.empty()){
+                    res.push_back(-1);
+                    s.push(arr[i]);
+                }else{
+                    res.push_back(s.top());
+                }
+    
+            }
+        }
+        
+        //reverse(res.begin(),res.end());
+    
+        return res;
+    }
 
 int main() {
     int n;
