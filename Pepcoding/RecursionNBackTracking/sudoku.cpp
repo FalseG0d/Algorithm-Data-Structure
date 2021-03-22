@@ -1,42 +1,80 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#define N 9
+
 using namespace std;
 
-int mat[9][9];
-
-bool isValid(int p,int q,int ele){
-    for(int )
+void print(int arr[N][N])
+{
+	for (int i = 0; i < N; i++) 
+	{
+		for (int j = 0; j < N; j++)
+			cout << arr[i][j] << " ";
+		cout << endl;
+	}
 }
 
-void sudokuSolve(int p,int q){
-    int np,nq;
-    if(q==8){
-        np=p+1;
-        nq=0;
-    }else{
-        np=p;
-        nq=q+1;
-    }
-    
-    if(mat[p][q]!=0)sudokuSolve(np,nq);
-    else{
-        for(int i=1;i<10;i++){
-            if(isValid(p,q,i)){
-                mat[p][q]=i;
-                sudokuSolve(np,nq);
-                mat[p][q]=0;
-            }
-        }
-    }
+bool isSafe(int grid[N][N], int row, 
+					int col, int num)
+{
+	for (int x = 0; x <= 8; x++)
+		if (grid[row][x] == num)
+			return false;
+	for (int x = 0; x <= 8; x++)
+		if (grid[x][col] == num)
+			return false;
+	int startRow = row - row % 3, 
+			startCol = col - col % 3;
+
+	for (int i = 0; i < 3; i++)
+		for (int j = 0; j < 3; j++)
+			if (grid[i + startRow][j + 
+							startCol] == num)
+				return false;
+
+	return true;
 }
 
-int main(){
-    for(int i=0;i<9;i++){
-        for(int j=0;j<9;j++){
-            cin>>mat[i][j];
-        }
-    }
-    
-    sudokuSolve(0,0);
-    
-    return 0;
+bool solveSuduko(int grid[N][N], int row, int col)
+{
+	if (row == N - 1 && col == N)
+		return true;
+
+	if (col == N) {
+		row++;
+		col = 0;
+	}
+	
+	if (grid[row][col] > 0)
+		return solveSuduko(grid, row, col + 1);
+
+	for (int num = 1; num <= N; num++) 
+	{
+
+		if (isSafe(grid, row, col, num)) 
+		{
+		
+			grid[row][col] = num;
+		
+			if (solveSuduko(grid, row, col + 1))
+				return true;
+		}
+		grid[row][col] = 0;
+	}
+	return false;
+}
+
+int main()
+{
+	int grid[N][N];
+	
+	for(int i=0;i<N;i++){
+		for(int j=0;j<N;j++)cin>>grid[i][j];
+	}
+
+	if (solveSuduko(grid, 0, 0))
+		print(grid);
+	else
+		cout << "no solution exists " << endl;
+
+	return 0;
 }
