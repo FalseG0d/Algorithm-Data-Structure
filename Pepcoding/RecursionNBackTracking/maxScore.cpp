@@ -7,7 +7,19 @@ int score[26];
 int maxScore=INT_MIN;
 
 void print(set<string>s){
-    int score=0;
+    map<char,int>temp=mp;
+    int tempScore=0;
+    for(auto itr=s.begin();itr!=s.end();++itr){
+        for(char ch:*itr){
+            if(temp[ch]>0){
+                temp[ch]--;
+                tempScore+=score[ch-'a'];
+                }else{
+                    return;
+                }
+        }
+    }
+    maxScore=max(maxScore,tempScore);
 }
 
 void stringSubSets(string str[],int pos,set<string>s){
@@ -42,5 +54,6 @@ int main(){
 
     stringSubSets(str,0,s);
     
+    cout<<maxScore;
     return 0;
 }
