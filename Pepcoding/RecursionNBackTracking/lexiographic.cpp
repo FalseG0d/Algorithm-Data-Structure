@@ -1,20 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-set<string>s;
+void lexiographic(int x,int n){
+    if(x>n)return;
+    int i=0;
 
-void lexiographic(int n){
-    for(int i=1;i<=n;i++){
-        int x=i;
-        string temp="";
-
-        while(x>0){
-            char ch='0'+(char)(x%10);
-            temp=ch+temp;
-            x/=10;
-        }
-        
-        s.insert(temp);
+    while(x<=n&&i<10){
+        if(x!=0){
+            cout<<x<<"\n";
+            lexiographic(x*10,n);
+            }
+        x++;i++;
     }
 }
 
@@ -22,8 +18,7 @@ int main(){
     int n;
     cin>>n;
 
-    lexiographic(n);
+    lexiographic(0,n);
 
-    for(auto itr=s.begin();itr!=s.end();++itr)cout<<*itr<<"\n";
     return 0;
 }
