@@ -16,3 +16,5 @@
 |Can provide implementation of inheritence|Can't provide implementation of abstract class|
 |Uses abstract keyword|Uses interface keyword|
 |Inheritence uses extends|Inheritence uses implements|
+
+3. Prim's vs Kruskal Algo
