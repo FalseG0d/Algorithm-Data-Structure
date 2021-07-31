@@ -18,3 +18,12 @@
 |Inheritence uses extends|Inheritence uses implements|
 
 3. Prim's vs Kruskal Algo
+
+4. BFS vs DFS
+
+|BFS|DFS|
+|:---|:---|
+|Visit the Nodes closest root First|Visit the Nodes farther from root First|
+|Uses Queue|Uses Stack|
+|O(V+E)|O(V+E)|
+|Optimal/Shortest Path|Not Optimal Solution|

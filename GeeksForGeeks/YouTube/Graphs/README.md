@@ -30,3 +30,34 @@ There are two types of Graphs:
 |:---|:---|
 |Saves space, O(V+E), worst case O(V^2)|In-efficient queries|
 |Adding a Vertex is simple||
+
+## BFS-Breadth First Search
+
+It is the layer wise traversal of a graph starting from a Node.
+
+**Time Complexity:** O(V+E)
+
+**Applications**
+
+1. Shortest Path in an Unweighted Graph
+2. Web Crawler
+3. Social Network
+4. Cycle Detection
+5. TO Check if Graph is Bipartite
+6. Ford-Fulkerson Algo 
+
+## DFS-Depth First Search
+
+It is the Depth wise traversal of a graph starting from a Node.
+
+**Time Complexity:** O(V+E)
+
+**Applications**
+
+1. Detect a Cycle in a Graph
+2. Topological Sorting
+3. Finding Strongly Connected Components
+4. Path Finding
+5. To Test if Graph is Bipartite
+6. Maze Puzzle
+
