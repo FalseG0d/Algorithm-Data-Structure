@@ -27,3 +27,11 @@
 |Uses Queue|Uses Stack|
 |O(V+E)|O(V+E)|
 |Optimal/Shortest Path|Not Optimal Solution|
+
+5. Comparable vs Comparator: Java provides two interfaces to sort the data members of the class.
+
+|Comparables|Comparator|
+|:---|:---|
+|Capable of comparing itself with another object|Comparator is external to the element type we are comparing, it has a second sort function|
+|Class must implement java.lang.Comparable||
+|We override the method compareTo()||
