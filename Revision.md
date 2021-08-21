@@ -43,4 +43,23 @@
 
     Prims   : Select the Min Edge and Repeat |N| - 1 times to add connected edges with min weights such that a new vertex is added.
 
-    Kruskal : 
+    Kruskal : Select the Min Ege which is not making a cycle, Repeat.
+
+    3. Source Shortest Path     : A way to find the Min path rom source vertex to all other vertex.
+        1. Dijikstra Algorithm  : Initially distance to all vertex except the source is set to Infinity while source will ofcourse be zero. Later we all connected vertex and update their distance to the Min(Original Distance, New Connected Vertex + WT of Edge), Repeat.
+        2. Bellman Ford Algo    : Repeat for |N| - 1 time, Relax all vertices
+
+
+            |Bellman Fords|Dijikstra|
+            |:---|:---|
+            |Works for Negative Edge Weights|Doesn't work for Negative Edge Weight|
+            |Dynamic Programming|Greedy Approach|
+            |O(V * E)|O(E * log V)|
+
+    4. String Pattern Matching  :
+        1. Naive Algo           : A simple nested look. *i will shift back to original i + 1 in case of mis-match*.
+                                : O(m * n)
+        2. KMP Algorithm        : Prepare a PI table to show the position of preffix that appears sometime before in same string, in case of mismatch fall back to last prefix instead of initial position + 1.
+                                : O(n)
+        3. Rabin Karp Algo      : Convert the pattern into a hash code, save the length of the pattern and run a loop over the String taking the previously saved number of characters at a time and use that to create and another hash, now compare this hash with the hash of the pattern, continuously add the new character into the hash while removing the previous first one and continue to compare hash until a match is found, when the hash matches, make sure to check the entire pattern then.
+                                : O(n - m + 1)
