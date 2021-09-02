@@ -33,6 +33,7 @@
     1. Find Median of 2 Sorted Arrays
     2. 2 Sum, 3 Sum and 4 Sum   :   
     3. Reverse a Linked List
+    4. Search In Matrix
 
 4. Theory Topics
 
