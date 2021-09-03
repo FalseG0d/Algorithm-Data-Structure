@@ -38,6 +38,9 @@
     4. Search In Matrix
     5. LRU Page Faults          : Vector.erase(iterator) can be used to simplify the approach
     6. Minimize Height          : Don't Do All the Calculations, Look for Answer instead
+    7. Egg Dropping Puzzle      : Don't Do All the Calculations, Look for Answer instead
+    8. Find Missing & Repeating : Interesting Answer Approach
+    9. Max Index                : Sliding Window Variation
 
 4. Theory Topics
 
@@ -70,3 +73,5 @@
                                 : O(n)
         3. Rabin Karp Algo      : Convert the pattern into a hash code, save the length of the pattern and run a loop over the String taking the previously saved number of characters at a time and use that to create and another hash, now compare this hash with the hash of the pattern, continuously add the new character into the hash while removing the previous first one and continue to compare hash until a match is found, when the hash matches, make sure to check the entire pattern then.
                                 : O(n - m + 1)
+
+6. Note To Self     :       Always check the Return Type, might be using long over int.
