@@ -42,6 +42,9 @@
     8.  Find Missing & Repeating : Interesting Answer Approach
     9.  Max Index                : Sliding Window Variation
     10. Triplet With Sum in Range: Think of Alternate Aporach if original Approach Fails.
+    11. Number Of Islands        : Remember Question's done before not their difficulty, it overwhelms. 
+    12. GFG Covid Spread         : Approach might be correct but COde might fail, in this case quickly try the same approach by a different DataStructure or Fresh Code, if that fails too skip the Question and come back to it later.
+    13. PreReq Tasks GFG Must Do :
 
 4. Theory Topics
 
