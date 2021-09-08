@@ -35,3 +35,10 @@
 |Capable of comparing itself with another object|Comparator is external to the element type we are comparing, it has a second sort function|
 |Class must implement java.lang.Comparable||
 |We override the method compareTo()||
+
+6. (equals) vs (==)
+
+|equals()|==|
+|:---|:---|
+|Method of Object Class|A Binary Operator|
+|Checks Equality of Content|Check/Compares the addresses/references|
