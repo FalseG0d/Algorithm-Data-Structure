@@ -18,6 +18,7 @@
                 }
             ```
         </details>
+
     3. Job Sequencing           : Sort the Jobs According to the decreasing order of their profits and then sequence the Job at the latest time slot available(before it's deadline and in an then available slot).
 
     *Assumption : All the Jobs take the same amount of time.*
@@ -33,20 +34,21 @@
     
 3. Good Questions
     1.  Find Median of 2 Sorted Arrays
-    2.  2 Sum, 3 Sum and 4 Sum   :   
+    2.  2 Sum, 3 Sum and 4 Sum 
     3.  Reverse a Linked List
     4.  Search In Matrix
-    5.  LRU Page Faults          : Vector.erase(iterator) can be used to simplify the approach
-    6.  Minimize Height          : Don't Do All the Calculations, Look for Answer instead
-    7.  Egg Dropping Puzzle      : Don't Do All the Calculations, Look for Answer instead
-    8.  Find Missing & Repeating : Interesting Answer Approach
-    9.  Max Index                : Sliding Window Variation
-    10. Triplet With Sum in Range: Think of Alternate Aporach if original Approach Fails.
-    11. Number Of Islands        : Remember Question's done before not their difficulty, it overwhelms. 
-    12. GFG Covid Spread         : Approach might be correct but COde might fail, in this case quickly try the same approach by a different DataStructure or Fresh Code, if that fails too skip the Question and come back to it later.
-    13. PreReq Tasks GFG Must Do :
+    5.  LRU Page Faults             : Vector.erase(iterator) can be used to simplify the approach
+    6.  Minimize Height             : Don't Do All the Calculations, Look for Answer instead
+    7.  Egg Dropping Puzzle         : Don't Do All the Calculations, Look for Answer instead
+    8.  Find Missing & Repeating    : Interesting Answer Approach
+    9.  Max Index                   : Sliding Window Variation
+    10. Triplet With Sum in Range   : Think of Alternate Aporach if original Approach Fails.
+    11. Number Of Islands           : Remember Question's done before not their difficulty, it overwhelms. 
+    12. GFG Covid Spread            : Approach might be correct but COde might fail, in this case quickly try the same approach by a different DataStructure or Fresh Code, if that fails too skip the Question and come back to it later.
+    13. PreReq Tasks GFG Must Do    :
+    14. Jump Game 2 Leet Code       : Sometimes Greedy Aproach is better than DP, Remember similar questions sometime distract from actual approach as we are struck with a totally wrong approach because of percieved familiarity.
 
-4. Theory Topics
+4. Theory Topics                : MySQL
 
 5. Other Topics
     1. Huffman Coding           : Switch ASCII codes with self codes that one can build using a Huffman Tree, since not al ASCII codes are used in our file.
