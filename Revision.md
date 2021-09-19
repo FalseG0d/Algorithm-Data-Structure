@@ -47,6 +47,8 @@
     12. GFG Covid Spread            : Approach might be correct but COde might fail, in this case quickly try the same approach by a different DataStructure or Fresh Code, if that fails too skip the Question and come back to it later.
     13. PreReq Tasks GFG Must Do    :
     14. Jump Game 2 Leet Code       : Sometimes Greedy Aproach is better than DP, Remember similar questions sometime distract from actual approach as we are struck with a totally wrong approach because of percieved familiarity.
+    15. Merge Intervals Leet Code
+    
 
 4. Theory Topics                : MySQL
 
