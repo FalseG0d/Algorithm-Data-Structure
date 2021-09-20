@@ -113,4 +113,4 @@ Cataln numbers satisfy the formula.
 
 <!--- MARKDOWN LINKS and IMAGES --->
 
-[catalan-number]: Images/CatalanNumber.png
+[catalan-number]: \Images\CatalanNumberRec.jpeg
