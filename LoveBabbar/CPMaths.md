@@ -91,3 +91,26 @@ public class Example
 
     (a * b ^ -1) mod P = ((a mod P) * (b ^ -1 mod P)) mod P
     (a * b ^ -1) mod P = ((a mod P) * (b ^ (P - 2) mod P)) mod P
+
+4. **Catalan Numbers**
+
+Sequence of natural numbers that occurs in many interesting conting problems eg. 
+
+    1. Count the number of expressions containing n pairs of parantheses which are correctly matched.
+    2. Counting the number of possible Binary Search Trees with n keys.
+    3. Count the number of full binary search trees with n+1 leaves.
+    4. Given a number n, return the number of ways you can draw n chords in a circle with 2 x n points such that no 2 chords intersect.
+
+```
+The first few Catalan numbers for n = 0, 1, 2, 3, … are 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862
+```
+
+**Recursive Solution**
+
+Cataln numbers satisfy the formula.
+
+![Catalan Number][catalan-number]
+
+<!--- MARKDOWN LINKS and IMAGES --->
+
+[catalan-number]: Images/CatalanNumber.png
