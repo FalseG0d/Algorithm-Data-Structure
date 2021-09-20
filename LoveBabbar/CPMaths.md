@@ -109,7 +109,7 @@ The first few Catalan numbers for n = 0, 1, 2, 3, … are 1, 1, 2, 5, 14, 42, 13
 
 Cataln numbers satisfy the formula.
 
-![Catalan Number][catalan-number]
+![Catalan Number](https://github.com/FalseG0d/Algorithm-Data-Structure/blob/master/LoveBabbar/Images/CatalanNumberRec.jpeg)
 
 <!--- MARKDOWN LINKS and IMAGES --->
 
