@@ -114,3 +114,29 @@ Cataln numbers satisfy the formula.
 <!--- MARKDOWN LINKS and IMAGES --->
 
 [catalan-number]: \Images\CatalanNumberRec.jpeg
+
+```
+unsigned long int catalan(unsigned int n)
+    if (n <= 1)
+        return 1;
+ 
+    // catalan(n) is sum of
+    // catalan(i)*catalan(n-i-1)
+    // for i = 0 to i = n - 1
+
+    unsigned long int res = 0;
+    for (int i = 0; i < n; i++)
+        res += catalan(i)
+            * catalan(n - i - 1);
+ 
+    return res;
+```
+
+5. **Solving Linear Recurrence Relation**
+
+A linear recurrence relation is a function or a sequence such that each term is a linear combination of previous terms. Each term can be described as a function of the previous terms.
+
+Eg. Fibonacci Series
+
+6. **Pigeon Hole Principle**
+
