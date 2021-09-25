@@ -48,7 +48,16 @@
     13. PreReq Tasks GFG Must Do    :
     14. Jump Game 2 Leet Code       : Sometimes Greedy Aproach is better than DP, Remember similar questions sometime distract from actual approach as we are struck with a totally wrong approach because of percieved familiarity.
     15. Merge Intervals Leet Code
-    
+    16. Gray Code Leet Code         : The Gray code has the feature of a single bit switch between consecutive numbers, it also has the added benifit of a difference of 2^itr in the reverse order of traversal of current list.
+    17. Declare a comparaotr for Set: 
+
+```
+struct comparator{
+    bool operator()(const vector<int>&v1,const vector<int>&v2) const{
+        // Code
+    }
+};
+```
 
 4. Theory Topics                : MySQL
 

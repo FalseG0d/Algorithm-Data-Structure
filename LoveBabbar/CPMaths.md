@@ -140,3 +140,7 @@ Eg. Fibonacci Series
 
 6. **Pigeon Hole Principle**
 
+```
+If n + 1 objects are put into n boxes, then at least one box contains two or more objects.
+```
+
