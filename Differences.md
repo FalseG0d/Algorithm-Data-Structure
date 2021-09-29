@@ -19,6 +19,13 @@
 
 3. Prim's vs Kruskal Algo
 
+|Prim's Algorithm|Kruskal's Algorithm|
+|:---|:---|
+|Starts from Min Vertex|Starts from the Vertex carrying the Min weight|
+|O(V^2)|O(E Log V)|
+|Works for only Connected graph|Can Work for disconnected graphs|
+|Faster in Dense graph|Faster in Sparse Graph|
+
 4. BFS vs DFS
 
 |BFS|DFS|
