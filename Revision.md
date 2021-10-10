@@ -155,10 +155,23 @@ struct comparator{
         12. Longest Valid Palindrome
         13. Iterative TOH
 
-    2. Heap
-        1. Heap Introduction and Identification: Condition regarding a variable K, Smallest/Largest them the Question is of Heap
+    2. Heap : Condition regarding a variable K, Smallest/Largest/Sorting them the Question is of Heap
 
         Space Complexity : O(K)
         Time Complexity  : O(N log K)
 
-        2. 
+        1. K Largest Numbers : 
+
+        2. Sort a K Sorted Array : Push the first K elements into the Min Heap, once the size is equal to K, then pop the top element into the Resultant Array in the required postion, continue the loop.
+
+        3. K Closest numbers : Similar to number except the Sorting will be customized as the absolute difference between the number and the given number.
+
+        4. Top K Frequent Numbers : First form a map of element and it's Frequency by traversing the Array to mark each element's Frequency, Then push the Map elements into the Priority Queue as pairs with Frequency as the first element.
+
+        5. Frequency Sort : 
+
+        6. K Closest To Origin :
+        
+        7. Connect Ropes to Minimize the Cost : Similar to Huffmann Code
+
+        8. Sum Of k1 Smallest and k2 Largest Elements : 
