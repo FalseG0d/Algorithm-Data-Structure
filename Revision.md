@@ -1,6 +1,7 @@
 # Quick Revision
 
 1. GFG Must Do Questions
+
 2. Generics Algorithms
     1. Matric Chain Multiplication
     2. Knap Sack
@@ -92,3 +93,72 @@ struct comparator{
                                 : O(n - m + 1)
 
 6. Note To Self     :       Always check the Return Type, might be using long over int.
+
+7. Aditya Verma     :
+
+    1. Stack PLaylist : **When we are using a Nested Loop, and the j of the second loop is dependent on the i of first loop, then one must think of somehow implementing the Stack.**
+
+        1. Nearest Greater To Left
+        2. Nearest Greater To Right : Next Largest Element  : Declare a Stack, Traverse the Array from Right To Left, Check in every turn of loop to see if the element in the stack is greater than the given element, if the stack gets empty without filling the result then put a -1 in it. Finally push the current element into the Stack.
+
+        3. Nearest Smallest To Left : Next Smallest Element
+        4. Nearest Smallest To Right
+
+        5. Stock Span Problem       : Save the index of the Greatest element to the left instead of the element itself and use it to calculate the Span of Stocks.
+        6. Maximum Area of Histogram: Find the inndex of Nearest Smallest to Left and Nearest Smallest to Right element use the Current Height and the difference in the Span as Width to calculate the Area of Histogram and Maximize it over the Array.
+
+        7. Max Area of Rectangle in Binary Matrix : Traverse through the Matrix to compress the 2-D matrix into the 1-D matrix form by adding the value of 1 level above, the end send the current 1-D matrix to the MAH function made above.
+
+        8. Rain Water Trapping      : First calculate the height of the Greatest building to the Left and Right, their Minima will be the level of water in that region, then subtract the current height of building from the level and add this to the result which was initially Zero.
+
+        9. Implementation of Min Stack : 
+        
+        With Extra Space    : Use two stack one contains all elements, while the supporting stack will hold elements that are smallest.
+        No Extra Space      : Use a variable to save the min element, we will use the Stack for 2 functions, one to store the elements, other to put a flag on when the minEle turns and what it will be.
+
+        ```
+        int top(){
+            if(s.size() == 0) return -1;
+
+            if(s.top() >= minEle) return s.top();
+            else return minEle;
+        }
+
+        void pop(){
+            if(s.size() == 0) return -1;
+
+            if(s.top() >= minEle) s.pop();
+            else{
+                minEle = 2 * minEle - s.top();
+                s.pop();
+            }
+        }
+
+        void push(int x){
+            if(s.size() == 0){
+                s.push(x);
+                minEle = x;
+            }
+            else{
+                if(x >= minEle) s.push(x);
+                else{
+                    s.push(2 * x - minEle);
+                    minEle = x;
+                }
+            }
+        }
+
+        ```
+
+        10. Stack using Heap
+        11. Celebrity Problem
+        12. Longest Valid Palindrome
+        13. Iterative TOH
+
+    2. Heap
+        1. Heap Introduction and Identification: Condition regarding a variable K, Smallest/Largest them the Question is of Heap
+
+        Space Complexity : O(K)
+        Time Complexity  : O(N log K)
+
+        2. 
