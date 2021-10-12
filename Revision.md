@@ -175,3 +175,11 @@ struct comparator{
         7. Connect Ropes to Minimize the Cost : Similar to Huffmann Code
 
         8. Sum Of k1 Smallest and k2 Largest Elements : 
+
+    3. Sliding Window Algorithm : Array/String, Sub Array/String, Largest/Smallest, Variable K
+
+        1. Max SubArray of Size K :
+        
+        2. First Negative Integer In Window of Size K : Declare 2 Variables End = K and Beg = 0, run a loop until End <= N, in the loop run a sub loop until Beg < End, push A[Beg] if it is less than 0 or push 0 into res if Beg == End at the end of the loop, also if End - K == Beg, increment Beg by 1.
+        
+        3. Max of All Subarrays of Size K : 
