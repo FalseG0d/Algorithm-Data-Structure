@@ -243,3 +243,83 @@ struct comparator{
         5. Level Order Binary Tree Traversal    : Traverse a Binary Tree in level order using Queue, push the New Node into the first NULL you find with Priority Given to the Right Child over Left Child.
 
         6. Deletion in Binary Tree              : Find the Deepest and the Right Most Node of the Tree, hold it's value and Delete the Node, then find the Node you wish to delete and then Over-write it's value with the Value of the Node you just Deleted.
+
+    2. Queue DS     : Follows FIFO.
+
+        1. Functions of Queue : 
+            1. empty()  : Returns true if Queue is empty
+            2. size()   : Returns size of Queue
+            3. queue::swap(queue) : Exchanges the content of 2 Queues q1.swap(q2)
+            4. front()  : Returns element at the Front
+            5. back()   : Returns element at the End
+            6. push(Element e) : 
+            7. pop()    :
+            8. emplace(Element e) : Similar to push except that push adds a copy of the object into the Queue while emplace will add the object itself.
+
+        2. Functions of Deque : Double Ended Queue
+            1. insert(Iterator it, Element e) : It adds an element to the Queue at the postion pointed by the iterator it, all the elements following and including it will be still present after the new elements.
+            2. insert(Iterator it, Number n, Element e) It adds n elements e at the position it.
+            3. insert(Iterator it, vector::iterator beg, vector::iterator end) Adds elements of a similar vector at position it.
+
+            4. rbegin() : Reverse Iterator Begin
+            5. rend()   : Reverse Iterator End
+
+            ```
+            for (auto it = dq.rbegin(); it != dq.rend(); ++it)
+            cout << *it << " ";
+            ```
+
+            6. max_size() : Max Number of Elements Dequeue can hold
+            
+            7. assign(Number n, Value v) : Makes a Queue of size n with all elements with v Values.
+            8. assign(Iterator beg, Iterator end) : Assigns Values from beg to end.
+
+            9. resize(Size n) : If the size is increased the new values will be 0 while if the size is decreased the values at the end will be removed.
+
+            10. push_front(Element e)
+            11. push_back(Element e)
+            12. pop_front()
+            13. pop_back()
+
+            14. front() : Element at the Front
+            15. back()  : Element at the Back
+
+            16. clear() : Removes all Elements
+            17. erase(Iterator it) : Remove Element from Specific position
+            17. erase(Iterator beg, Iterator end) : Remove Element from Specific range
+
+            18. empty()
+            19. size()
+
+            20. = Operator : dequeue1 = dequeue2, makes all the inputs in dequeu2 into dequeue1
+            21. [] Operator: dequeue[position] return the element at position
+
+            22. at(Position pos) : 
+            23. Queue1.swap(Queue2) :
+
+            24. emplace_front(Element e) and emplace_back(Element e)
+
+        3. Functions of Priority Queue :
+        
+            1. priority_queue<int> Max Heap : Top has Max Element.
+            2. priority_queue<int, vector<int>, greater<int>> Min Heap : Top has Min Element
+
+            1. empty()
+            2. size()
+            3. top()
+            
+            4. push()
+            5. pop()
+
+            6. swap()
+            7. emplace()
+            8. value_type() : Returns the type of elements stored.
+
+        4. Functions of List : Simimilar to vectors but slower, functionality like dequeue except : 
+            1. reverse()
+            2. sort(Iterator begin, Iterator end)
+            3. unique() : Removes duplicate consecutive elements
+            4. splice(Iterator it, List l2) : Transfer elements of l2 into current list at position it
+            5. merge(List l2) : Merges all elemenst of a sorted list l2 into l1.
+
+        5. 
