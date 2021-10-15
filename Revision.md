@@ -323,3 +323,36 @@ struct comparator{
             5. merge(List l2) : Merges all elemenst of a sorted list l2 into l1.
 
         5. 
+
+9. Fang 2.0 Pep Coding : 
+    1. Graph : 
+        1. isBipartite : 
+            1. Color Graph : Color current node with one color and all it's neighbours it's complement, then move to the next node and validate if the coloring is correct and possible, if true return true otherwise false.
+
+10. Pep Coding : 
+    1. Sparse Table : Size of N x Log(N), helps to query min and max values in an array optimally.
+    2. Morris Traversal : Used for Traversal of Binary Tree without using any Stack or Recursion, simply connects the last node back to the Node we need to visit.
+
+    ![Morris-Traversal](./Images/Morris-Traversal.png)
+
+    3. Tree To Double Ended Queue
+    4. Tree To Circular Queue
+
+    5. Topological Order : The question of deciding the order in which Books have to be read incase one book has to be read before the other conditions exist.
+
+    What we need to do is Start from any Node, apply DFS on the node, when there is no way forward, return to the root Node while pushing each vertex back into a stack and then move to another node which has not been visited already, finally Output the content of the Stack into a vector to receive the Topological Sort.
+
+    For Acyclic Directed Graph
+
+    6. Level Order Traversal
+
+    7. Kahn's Algorithm : Helps traverse a Tree according to their Level. First Find the InDegree of all the Nodes ie the Number of Nodes which point to Current Node or the Number of Dependencies of the Node. Now Find all the nodes with Degree 0 and push them into Result, those which have been pushed has to be removed from graph and once removed they will no longer effect the In-Degree of their children, after each remove reduce the in-degree by One of their Child, now whichever Node has degree 0 will be removed from the Graph, continue the process until no Node is left.
+
+    8. KosaRaju Algorithm : 
+        1. Strongly Connected Component : If one can reach back to a Node after traversing through the Graph and all the node which were in this Path are capable of doing the Same, then the Node is called a Strongly Connected Component.
+
+        Used to convert a Directed Cyclic Graph to a Directed Acyclic Graph by Converting the Strongly Connected Component as a Single Node.
+
+        ![Strongly-Connect-Component](Images/Strongly-Connect-Component.png)
+
+        Longest Increasing Path In a Matrix-LeetCode
