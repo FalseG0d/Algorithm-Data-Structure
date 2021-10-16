@@ -242,7 +242,7 @@ struct comparator{
                     2. Coin Change Problem (Number of Ways)
                     3. Coin Change Problem (Min Number of Coins)
                 
-            4. Longest Common Sub-Sequence : Has max number of Variation. *Problem Statement* : 2 strings are given, choose the lcs(dis-continuous).
+        2. Longest Common Sub-Sequence : Has max number of Variation. *Problem Statement* : 2 strings are given, choose the lcs(dis-continuous).
 
                 1. Recursion : Run a recursion for S1, S2, x, y. Where x and y are both the positions of the current index in question for the strings. At ech turn if S1[x] == S2[y] then return 1 + rec(x-1, y-1, S1, S2) else return the max of rec(x-1, y, S1, S2) and rec(x, y-1, S1, S2).
                 2. Add Memoization.
@@ -273,6 +273,13 @@ struct comparator{
 
                             4. Min Number of Insertions to Make String a Palindrome : Length(Original String) - Length(Longest Palindromic Sub-Sequence)
                     
+
+
+
+            5. M
+
+
+        3. Matrix Chain Multiplication(MCM) : A String or Array is present, which has to broken down between variables i and j at another variable k.
 
 8. Data Structures  :
 
