@@ -215,6 +215,65 @@ struct comparator{
 
         15. Allocate Min Number Of Pages : Similar to Finding the Square Root : Set High = Sum of All Pages and Low = Num of Pages in Book 1, run loop for Low < High, mid = (low + high) / 2, allocate books to students such that their page sum donot exceed the mid if it increases then start allocation to the next student, if the number of students in this way is greater than the available students set low to mid and continue, else if the number of students is less than the available students set the High to Mid, else return result.
 
+    5. Dynamic Programming : An enhanced form of Recursion. If the problem is using Recursion. At every point we will have a choice eg. In KnapSack we have a choice to add or leave an item. The question asks for Optimality.**The Min/Max is affected when dealing with INT_MAX / INT_MIN as the values will get currupted if a wrong value is added or removed**.
+
+        1. Knap Sack : 
+            1. 01 Knap Sack : Items in limited supply and cannot be divided.
+                1. Run recursion for each item, either add it to Knap Sack or leave it, call Recursion for each choice, maximize the choice.
+                2. Add Memoization to the Recursion.
+                3. Build Table. Item No + 1 x Capacity Of Knap Sack.
+
+                4. Variations Based on 01 Knap Sack : 
+                    1. Subset Sum
+                    2. Equal Sum Partition
+                    3. Count of Subset Sum
+                    4. Minumum Subset Sum Diff
+                    5. Target Sum
+                    6. No of Subsets 
+            2. Fractional Knap Sack : Simple Greedy approach, Find the items with most Wt/Value. Fill the items with the highest ratio.
+
+            3. Un Bounded Knap Sack : An unlimited supply of items.
+                1. Run recursion for each item, you can choose to either take the item or leave it, if you are leaving the item move onto the next otherwise stay on the current index only, maximize this. Stop when the Bag is full.
+                2. Add Momoization.
+                3. Implement Top Down.
+
+                4. Variations : 
+                    1. Rod Cutting
+                    2. Coin Change Problem (Number of Ways)
+                    3. Coin Change Problem (Min Number of Coins)
+                
+            4. Longest Common Sub-Sequence : Has max number of Variation. *Problem Statement* : 2 strings are given, choose the lcs(dis-continuous).
+
+                1. Recursion : Run a recursion for S1, S2, x, y. Where x and y are both the positions of the current index in question for the strings. At ech turn if S1[x] == S2[y] then return 1 + rec(x-1, y-1, S1, S2) else return the max of rec(x-1, y, S1, S2) and rec(x, y-1, S1, S2).
+                2. Add Memoization.
+                3. Implement Top-Down.
+
+                4. Variations : 
+                    1. Longest Common Substring : Similar to LCS except the rec call will also have a variable of common until now, if the current characters are equal call the rec with decrementing x and y and incrementing common until now. Else return max(common until now, rec(x-1,y-1, S1, S2, 0)) where 0 is the common until now.
+
+                    2. Print LCS Between two Strings : 
+                    ![Print-LCS](./Images/PrintLCS.png)
+
+                    3. Shortest Common Super String : The shortest String such that both the input strings A and B are it's Sub-Sequence. Check for curent index if the char are similar add 1 to result and move to rec(x-1, y-1) else we will either print one of the 2 characters and move to rec(x-1,y) or rec(x,y-1), since we will either way print 1 character and are trying for the minimum solution, we will be adding 1 to the result to the minimum of both recursions.
+                        1. Recursion : if(x == 0) return y, if(y == 0) return x, if(S1[x] == S2[y]) return 1 + rec(S1, S2, x-1, y-1) else return 1 + min(rec(S1, S2, x-1, y), rec(S1, S2, x, y-1)).
+                        2. Memoization
+                        3. Top-Down Implementation
+
+                    4. Minimum number of Insertion and Deletion to convert String S1 to S2 : Find the Length of Shortest Super String and LCS, return : (Shortest Common Super String).length() - (Longest Common Sub-Sequence).length()
+
+                    5. Print Shortest Common Super-Sequence : Use Table
+
+                    6. Longest Palindromic SubSequence : Reverse the Given String, find it's LCS with the Original String.
+                        1. Variations : 
+                            1. Min Number of Deletion to Make String a Palindrome : Length(Original String) - Length(Longest Palindromic Sub-Sequence)
+
+                            2. Longest Repeating SubSequence : Similar to LCS except the Same String is sent as S1 and S2. The only difference is that though the characters have to be same for the increment, their indexes will have to be different aswell.
+
+                            3. Sequence Pattern Matching : Is S1 a subsequence of S2. Find LCS length of S1 and S2 if the length of LCS == length of S1 return true else false.
+
+                            4. Min Number of Insertions to Make String a Palindrome : Length(Original String) - Length(Longest Palindromic Sub-Sequence)
+                    
+
 8. Data Structures  :
 
     1. Binary Tree  : Not linear but Heirarchial data structures, used for data that naturally forms heirarchy eg File Structure.
