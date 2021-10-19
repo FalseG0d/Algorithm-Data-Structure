@@ -51,6 +51,7 @@
     15. Merge Intervals Leet Code
     16. Gray Code Leet Code         : The Gray code has the feature of a single bit switch between consecutive numbers, it also has the added benifit of a difference of 2^itr in the reverse order of traversal of current list.
     17. Declare a comparaotr for Set: 
+    18. Palindromic Partitioning : Recursion and Memoization is Ok but the most Optimal Solution will be when we check if the answer was lagged before we make the function call itself.
 
 ```
 struct comparator{
