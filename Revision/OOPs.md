@@ -2,6 +2,8 @@
 
 A Programing Paradigm, revolves around objects which are real world instances of entities like Class, which can be defined as a template for Characterstics and Behaviours.
 
+*Follows Bottom Up*
+
 **Need**
 
 1. Easy to understand
