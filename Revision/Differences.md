@@ -1,10 +1,14 @@
 # Differences Between Concepts
 
-1. Dijikstra vs Prims Algo
+1. Dijikstra vs Bellman Ford Algo
 
-|Dijikstra Algo|Prims Algo|
+For Calculating the Shortest Path
+
+|Dijikstra Algo|Bellman Ford Algo|
 |:---|:---|
-
+|Doesn't work for Negative Weights|Works for Negative Weights|
+|V x V|E x V|
+|Greedy Approach|Dynamic Programming|
 
 2. Abstract Class vs Interfaces
 
@@ -19,6 +23,16 @@
 
 3. Prim's vs Kruskal Algo
 
+Spanning Tree : Sub Graph of Graph(Edges), such that there are All Vertices(N) and (N-1) Edges, connecting all the Vertices.
+
+```
+Number Of Possible ST : |E| C |V|-1 - |Cycles Present|
+```
+
+Min Spanning Tree : For Weighted Graph, a Spanning Tree such that the total Weight is Minimum.
+
+Both are Greedy
+
 |Prim's Algorithm|Kruskal's Algorithm|
 |:---|:---|
 |Starts from Min Vertex|Starts from the Vertex carrying the Min weight|
@@ -27,6 +41,8 @@
 |Faster in Dense graph|Faster in Sparse Graph|
 
 4. BFS vs DFS
+
+Graph Traversal Techniques
 
 |BFS|DFS|
 |:---|:---|
