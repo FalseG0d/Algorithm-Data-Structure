@@ -100,13 +100,14 @@ struct comparator{
     1. Stack Playlist : **When we are using a Nested Loop, and the j of the second loop is dependent on the i of first loop, then one must think of somehow implementing the Stack.**
 
         1. Nearest Greater To Left
-        2. Nearest Greater To Right : Next Largest Element  : Declare a Stack, Traverse the Array from Right To Left, Check in every turn of loop to see if the element in the stack is greater than the given element, if the stack gets empty without filling the result then put a -1 in it. Finally push the current element into the Stack.
+        2. Nearest Greater To Right : Next Largest Element  : Declare a Stack, fill it with elements from Right to Left such that current element is greater than the Top. Traverse the Array from Left to Right, Check in every turn of loop to see if the element in the top of the stack is greater than the current element, if the stack gets empty without filling the result then put a -1 in it. Finally push the current element into the Stack.
 
         3. Nearest Smallest To Left : Next Smallest Element
         4. Nearest Smallest To Right
 
         5. Stock Span Problem       : Save the index of the Greatest element to the left instead of the element itself and use it to calculate the Span of Stocks.
-        6. Maximum Area of Histogram: Find the inndex of Nearest Smallest to Left and Nearest Smallest to Right element use the Current Height and the difference in the Span as Width to calculate the Area of Histogram and Maximize it over the Array.
+        
+        6. Maximum Area of Histogram: Find the index of Nearest Smallest to Left and Nearest Smallest to Right element use the Current Height and the difference in the Span as Width to calculate the Area of Histogram and Maximize it over the Array.
 
         7. Max Area of Rectangle in Binary Matrix : Traverse through the Matrix to compress the 2-D matrix into the 1-D matrix form by adding the value of 1 level above, the end send the current 1-D matrix to the MAH function made above.
 
@@ -273,11 +274,6 @@ struct comparator{
                             3. Sequence Pattern Matching : Is S1 a subsequence of S2. Find LCS length of S1 and S2 if the length of LCS == length of S1 return true else false.
 
                             4. Min Number of Insertions to Make String a Palindrome : Length(Original String) - Length(Longest Palindromic Sub-Sequence)
-                    
-
-
-
-            5. M
 
 
         3. Matrix Chain Multiplication(MCM) : A String or Array is present, which has to broken down between variables i and j at another variable k.
@@ -381,6 +377,32 @@ struct comparator{
             6. swap()
             7. emplace()
             8. value_type() : Returns the type of elements stored.
+
+            ```
+
+            class Foo
+            {
+
+            };
+
+            class Compare
+            {
+            public:
+                bool operator() (Foo, Foo)
+                {
+                    return true;
+                }
+            };
+
+            int main()
+            {
+                std::priority_queue<Foo, std::vector<Foo>, Compare> pq;
+                return 0;
+            }
+
+            ```
+
+
 
         4. Functions of List : Simimilar to vectors but slower, functionality like dequeue except : 
             1. reverse()
