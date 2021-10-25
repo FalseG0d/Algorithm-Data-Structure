@@ -1,7 +1,14 @@
 # Tech Dose Graph Playlist
 
 ## DFS - Depth First Search
+
+Time Complexity : O(V)
+Space Complexity : O(H)
+
 ## BFS - Breadth First Search
+
+Time Complexity : O(V)
+Space Complexity : O(V)
 
 ## Detect A Cycle - Directed Graph
 
