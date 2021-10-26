@@ -6,6 +6,27 @@
 
 ## Algorithms
 
+1. Definite(Un-Ambiguous)
+2. Finite(Algo Must Stop unlike Program/Service which may Go On)
+3. Input
+4. Output
+5. Effective(Must Work for All the Possible Inputs and Conditions)
+
+**Algorithm vs Program**
+
+|Algorithm|Program|
+|:---|:---|
+|Made during the Design Time|Made during Programming Time|
+|Made by any Person with Domain Knowledge|Done by Developer|
+|Hardware and OS Independent|Hardware and OS Dependent|
+
+|Priori Analysis|Posteriori Analysis|
+|:---|:---|
+|For Algo|For Program|
+|Before Development|After Development|
+|Hardware and OS Independent|Hardware and OS Dependent|
+|Time and Space Complexity|Watch Time and Bytes|
+
 ## Sorting Algorithms
 
 1. Insertion Sort
