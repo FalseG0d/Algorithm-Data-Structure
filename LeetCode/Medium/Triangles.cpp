@@ -11,12 +11,6 @@ public:
             }
         }
         
-        // for(vector<int>v:triangle){
-        //     for(int i:v){
-        //         cout<<i<<" ";
-        //     }cout<<"\n";
-        // }
-        
         int res = INT_MAX;
         
         for(int x:triangle[levels-1]){
