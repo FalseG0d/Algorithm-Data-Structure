@@ -10,7 +10,6 @@ public:
                 else triangle[i][j] += min(triangle[i-1][j], triangle[i-1][j-1]);
             }
         }
-        
         int res = INT_MAX;
         
         for(int x:triangle[levels-1]){
