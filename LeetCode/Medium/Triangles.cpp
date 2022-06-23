@@ -2,7 +2,6 @@ class Solution {
 public:
     int minimumTotal(vector<vector<int>>& triangle) {
         int levels = triangle.size();
-        
         for(int i=1;i<levels;i++){
             for(int j=0;j<i+1;j++){
                 if(j == 0) triangle[i][j] += triangle[i-1][j];
