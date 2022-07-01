@@ -4,9 +4,7 @@ public:
 //         int N = nums.size();
         
 //         if(N == 1) return nums[0];
-        
 //         sort(nums.begin(), nums.end());
-        
 //         if(nums[0] != nums[1]) return nums[0];
 //         if(nums[N-1] != nums[N-2]) return nums[N-1];
         
