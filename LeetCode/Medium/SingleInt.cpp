@@ -7,9 +7,7 @@ public:
 //         sort(nums.begin(), nums.end());
 //         if(nums[0] != nums[1]) return nums[0];
 //         if(nums[N-1] != nums[N-2]) return nums[N-1];
-        
 //         int itr = 1;
-        
 //         while(itr < N){
 //             if(nums[itr] != nums[itr-1]) return nums[itr-1];
             
