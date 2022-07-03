@@ -1,92 +1,54 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-struct node{
-    int val;
-    node*next;
-};
+stack<int> getStack(int arr[], int N){
+    stack<int>s;
 
-class Stack{
-    node*top;
-    public:
-    Stack(){
-        top=NULL;
-    }
-    void push(int val){
-        node*temp=new node();
-        if(temp==NULL){
-            cout<<"Overflow";return;
-        }
-        temp->val=val;
-        temp->next=NULL;
+    for(int i=N-1;i>=0;i--) s.push(arr[i]);
+    // for(int i=0;i<N;i++) s.push(arr[i]);
 
-        if(top==NULL)top=temp;
-        else{
-            temp->next=top;
-            top=temp;
-        }
+    return s;
+}
+
+void print(stack<int>s){
+    while(!s.empty()){
+        cout<<s.top()<<" ";
+        s.pop();
     }
-    void pop(){
-        if(top==NULL){
-            cout<<"Undeflow";return;
-        }
-        node*temp=top;
-        top=top->next;
-        delete temp;
+}
+
+stack<int> sort(stack<int>s){
+    if(s.empty()) return s;
+
+    int val = s.top();
+    s.pop();
+
+    stack<int>sorted = sort(s);
+    stack<int>aux;
+
+    while(!sorted.empty() && val > sorted.top()){
+        aux.push(sorted.top());
+        sorted.pop();
     }
-    void print(){
-        node*temp=top;
-        while(temp!=NULL){
-            cout<<temp->val<<" ";
-            temp=temp->next;
-        }cout<<"\n";
+    sorted.push(val);
+    while(!aux.empty()){
+        sorted.push(aux.top());
+        aux.pop();
     }
 
-    void recSort(int val){
-        // print();
-        if(top==NULL){
-            push(val);return;
-            }
+    return sorted;
+}
 
-        push(val);
-        node*temp=top;
+int main() {
+    int arr[] = {9,0,7,4,5,4,3,1,1};
+    stack<int> s = getStack(arr, 9);
 
-        while(temp->next!=NULL){
-            node*next=temp->next;
-            
-            if(next->val<temp->val){
-                int val=next->val;
-                next->val=temp->val;
-                temp->val=val;
-            }
+    s = sort(s);    
 
-            temp=temp->next;
-        }
+    while(!s.empty()){
+        cout<<s.top()<<" ";
+        s.pop();
     }
-
-    void sort(){
-        // print();
-        if(top==NULL)return;
-
-        int a=top->val;
-
-        pop();
-        sort();
-        recSort(a);
-    }
-};
-
-int main(){
-    Stack s;
-
-    s.push(10);
-    s.push(4);
-    s.push(30);
-    s.push(6);
-    s.push(1);
-
-    s.sort();
-    s.print();
 
     return 0;
 }
