@@ -58,7 +58,6 @@ public:
         
         itr2 = reverse(itr2);
         
-        
         while(itr1 != NULL && itr2 != NULL){
             ListNode*temp1 = itr1->next;
             ListNode*temp2 = itr2->next;
