@@ -34,7 +34,8 @@ public:
         while(itr != NULL){
             cout<<itr->val<<"->";
             itr = itr->next;
-        }cout<<"\n";
+        }
+        cout<<"\n";
     }
     void reorderList(ListNode* head) {
         int N = 0;
