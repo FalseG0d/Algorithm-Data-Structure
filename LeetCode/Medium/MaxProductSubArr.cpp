@@ -17,7 +17,6 @@ public:
     int getMaxEle(vector<int>& nums) {
         int N = nums.size();
         int res = INT_MIN;
-        
         for(int i=0;i<N;i++){
             res = max(res, nums[i]);
         }
