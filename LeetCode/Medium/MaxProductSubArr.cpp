@@ -28,7 +28,6 @@ public:
         
         int currMin = 1;
         int currMax = 1;
-        
         for(int i=0;i<N;i++){
             if(nums[i] == 0){
                 currMin = currMax = 1;
