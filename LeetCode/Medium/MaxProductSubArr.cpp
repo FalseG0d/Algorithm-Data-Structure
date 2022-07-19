@@ -24,8 +24,7 @@ public:
     }
     int maxProduct(vector<int>& nums) {
         int res = getMaxEle(nums);
-        int N = nums.size();
-        
+        int N = nums.size();      
         int currMin = 1;
         int currMax = 1;
         for(int i=0;i<N;i++){
