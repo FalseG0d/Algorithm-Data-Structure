@@ -36,8 +36,7 @@ public:
             currMax = maxOf(currMax * nums[i], currMin * nums[i], nums[i]);
             currMin = minOf(temp, currMin * nums[i], nums[i]);
             res = max(res, currMax);
-        }
-            
+        }       
         return res;
     }
 };
