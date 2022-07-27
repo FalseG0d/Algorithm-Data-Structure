@@ -32,7 +32,6 @@ public:
                 currMin = currMax = 1;
                 continue;
             }
-            
             int temp = currMax * nums[i];
             currMax = maxOf(currMax * nums[i], currMin * nums[i], nums[i]);
             currMin = minOf(temp, currMin * nums[i], nums[i]);
