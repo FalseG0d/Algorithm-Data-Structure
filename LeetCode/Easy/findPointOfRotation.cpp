@@ -8,7 +8,6 @@ public:
         while(beg<end){
             if((beg+end)/2==mid){mid=end;break;}
             else mid=(beg+end)/2;
-            
             if(arr[mid]>arr[end])beg=mid;
             else if(arr[beg]>arr[mid])end=mid;
         }
