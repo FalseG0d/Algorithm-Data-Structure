@@ -6,7 +6,6 @@ public:
         
         int maxLen=INT_MAX;
         string res="";
-        
         for(string s:strs)
             maxLen=s.length()<maxLen?s.length():maxLen;
         
