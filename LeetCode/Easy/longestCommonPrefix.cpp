@@ -19,8 +19,7 @@ public:
                         flag=!flag;
                         }
                 }
-            }
-            // cout<<res<<"\n";
+            }            
         }
         
         return res;
