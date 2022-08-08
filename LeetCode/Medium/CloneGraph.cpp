@@ -23,10 +23,8 @@ class Solution {
 public:
     void print(Node*node){
         queue<Node*>que;
-        que.push(node);
-        
+        que.push(node);        
         unordered_map<Node*,bool>mp;
-        
         while(!que.empty()){
             Node*temp = que.front();
             que.pop();
@@ -40,7 +38,6 @@ public:
                 if(mp.find(itr) == mp.end()) que.push(itr);
             }
             cout<<"\n";
-            
             mp[temp] = true;
         }
     }
