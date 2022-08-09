@@ -28,11 +28,8 @@ public:
         while(!que.empty()){
             Node*temp = que.front();
             que.pop();
-            
             if(mp[temp]) continue;
-            
             cout<<temp->val<<": ";
-            
             for(Node*itr:temp->neighbors){
                 cout<<itr->val<<", ";
                 if(mp.find(itr) == mp.end()) que.push(itr);
