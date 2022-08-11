@@ -8,7 +8,6 @@ public:
         if(board[p][q] == 'X' || board[p][q] == '1') return;
         
         board[p][q] = '1';
-        
         dfs(board, p-1,q);
         dfs(board, p+1,q);
         dfs(board, p,q-1);
