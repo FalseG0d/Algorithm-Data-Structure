@@ -4,10 +4,8 @@ public:
     void dfs(vector<vector<char>>& board, int p, int q) {
         int M = board.size();
         int N = board[0].size();
-        
         if(p < 0 || p >= M || q < 0 || q >= N) return;
         if(board[p][q] == 'X' || board[p][q] == '1') return;
-        
         board[p][q] = '1';
         dfs(board, p-1,q);
         dfs(board, p+1,q);
