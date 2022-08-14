@@ -21,10 +21,12 @@ public:
             if(board[0][i] == 'O') dfs(board, 0, i);
             if(board[M-1][i] == 'O') dfs(board, M-1, i);
         }
+
         for(int i=0;i<M;i++){
             if(board[i][0] == 'O') dfs(board, i, 0);
             if(board[i][N-1] == 'O') dfs(board, i, N-1);
-        }      
+        }
+              
         for(int i=0;i<M;i++){
             for(int j=0;j<N;j++){
                 if(board[i][j] == 'O') board[i][j] = 'X';
