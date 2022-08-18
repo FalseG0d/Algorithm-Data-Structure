@@ -18,7 +18,6 @@ public:
         
         int startI = 3 * (p / 3);
         int startJ = 3 * (q / 3);
-        
         int endI = 3 * (p / 3 + 1);
         int endJ = 3 * (q / 3 + 1);
         
