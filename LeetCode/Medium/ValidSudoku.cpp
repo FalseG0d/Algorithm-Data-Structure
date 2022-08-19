@@ -24,7 +24,6 @@ public:
         for(int i=startI;i<endI;i++){
             for(int j=startJ;j<endJ;j++){
                 if(i == p && j == q) continue;
-                
                 if(board[i][j] == check) return false;
             }
         }
@@ -38,8 +37,7 @@ public:
             for(int j=0;j<N;j++){
                 if(board[i][j] == '.') continue;
                 else{
-                    bool flag = check(board,i,j);
-                    
+                    bool flag = check(board,i,j);                  
                     if(!flag) return false;
                 }
             }
