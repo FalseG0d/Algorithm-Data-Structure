@@ -9,13 +9,11 @@ public:
             
             if(board[i][q] == check) return false;
         }
-        
         for(int i=0;i<N;i++){
             if(i == q) continue;
             
             if(board[p][i] == check) return false;
         }
-        
         int startI = 3 * (p / 3);
         int startJ = 3 * (q / 3);
         int endI = 3 * (p / 3 + 1);
@@ -27,7 +25,6 @@ public:
                 if(board[i][j] == check) return false;
             }
         }
-        
         return true;
     }
     bool isValidSudoku(vector<vector<char>>& board) {
