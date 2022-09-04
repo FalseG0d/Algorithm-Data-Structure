@@ -20,7 +20,6 @@ public:
                 break;
             }
         }
-        
         if(flag) return "0";
         flag = true;
         
