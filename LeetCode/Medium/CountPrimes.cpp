@@ -8,6 +8,7 @@ public:
         for(long long i=2;i<n;i++){
             if(mp[i]) continue;
             
+            
             res++;
             long long j = 0;
             for(long long j=i*i;j<n;j+=i){
