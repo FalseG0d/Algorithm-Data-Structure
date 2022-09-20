@@ -14,8 +14,7 @@ public:
             temp.pop_back();
         }
     }
-    
-    
+
     vector<vector<int>> combine(int n, int k) {
         help(1, n, k, {});
         
