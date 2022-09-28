@@ -15,7 +15,6 @@ class Solution{
             else mp[sum] = i;
         }
         
-        
         return res;
     }
 };
