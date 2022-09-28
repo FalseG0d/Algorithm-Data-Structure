@@ -14,8 +14,6 @@ class Solution{
             if(mp.find(sum) != mp.end()) res = max(res, i - mp[sum]);
             else mp[sum] = i;
         }
-        
-        
         return res;
     }
 };
