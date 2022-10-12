@@ -9,6 +9,7 @@ public:
             maxArea = std::max(maxArea, std::min(height[lm], height[rm]) * (rm - lm));
             (height[lm]<=height[rm])?lm++:rm--;
         }
+        
         return maxArea;
     }
 };
