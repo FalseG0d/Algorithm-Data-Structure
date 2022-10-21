@@ -33,19 +33,7 @@ int main() {
 	           arr1[i][j] = arr1[i][j-1] + v[j];
 	           arr2[i][j] = arr2[i][j-1] * v[j];
 	       }
-	   }
-	   
-	   //for(int i=0;i<N;i++){
-	   //    for(int j=0;j<N;j++) cout<<arr1[i][j]<<" ";
-	   //    cout<<"\n";
-	   //}
-	   
-	   //cout<<"\n";
-	   
-	   //for(int i=0;i<N;i++){
-	   //    for(int j=0;j<N;j++) cout<<arr2[i][j]<<" ";
-	   //    cout<<"\n";
-	   //}
+	   }git add 
 	   
 	   for(int i=0;i<N;i++){
 	       for(int j=i;j<N;j++){
