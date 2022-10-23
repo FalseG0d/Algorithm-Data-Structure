@@ -33,7 +33,7 @@ int main() {
 	           arr1[i][j] = arr1[i][j-1] + v[j];
 	           arr2[i][j] = arr2[i][j-1] * v[j];
 	       }
-	   }git add 
+	   }
 	   
 	   for(int i=0;i<N;i++){
 	       for(int j=i;j<N;j++){
