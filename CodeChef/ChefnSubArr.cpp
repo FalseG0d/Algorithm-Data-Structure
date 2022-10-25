@@ -27,7 +27,6 @@ int main() {
 	       arr1[i][i] = v[i];
 	       arr2[i][i] = v[i];
 	   }
-	   
 	   for(int i=0;i<N;i++){
 	       for(int j=i+1;j<N;j++){
 	           arr1[i][j] = arr1[i][j-1] + v[j];
