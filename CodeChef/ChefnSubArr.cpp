@@ -32,7 +32,6 @@ int main() {
 	           arr2[i][j] = arr2[i][j-1] * v[j];
 	       }
 	   }
-	   
 	   for(int i=0;i<N;i++){
 	       for(int j=i;j<N;j++){
 	           if(arr1[i][j] == arr2[i][j]) res++;
