@@ -20,7 +20,8 @@ int main() {
 	        arr1[i] = new int[N];
 	        arr2[i] = new int[N];
 	    }
-	    int res = 0;
+	    
+		int res = 0;
 	   
 	   for(int i=0;i<N;i++){
 	       arr1[i][i] = v[i];
