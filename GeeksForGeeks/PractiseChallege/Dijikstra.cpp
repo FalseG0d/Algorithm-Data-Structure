@@ -67,7 +67,6 @@ int main()
             t2.push_back(w);
             adj[v].push_back(t2);
         }
-        
         int S;
         cin>>S;
         
