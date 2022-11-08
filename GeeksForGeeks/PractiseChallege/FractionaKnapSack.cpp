@@ -63,7 +63,8 @@ int main()
 	cout<<setprecision(2)<<fixed;
 	while(t--){
 	    //size of array and weight
-		int n, W;
+		
+        int n, W;
 		cin>>n>>W;
 		
 		Item arr[n];
