@@ -1,51 +1,37 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-<style>
-    th{ 
-        color:#fff;
+class Solution {
+    public:
+        int shipWithinDays(vector<int>& weights, int days) {
+            int left = 0;
+            int right = 0;
+            for(int i : weights){
+                left = max(left, i);
+                right += i;
             }
-</style>
-
-
-<table class="table table-striped">
-    <tr  class="bg-info">
-        <th>Name</th>
-        <th>Age</th>
-        <th>Rank</th>
-    </tr>
-
-    <tbody id="myTable">
-        
-    </tbody>
-</table>
-
-<script>
-	var myArray = [
-	    {'name':'Apoorv', 'age':'24', 'rank':'3'},
-	    {'name':'Twinkle', 'age':'23', 'rank':'1'},
-	    {'name':'Arun', 'age':'23', 'rank':'2'},
-        {'name': 'Manish', 'age': '50', 'rank': '0'}
-	]
-	
-	buildTable(myArray)
-
-
-
-	function buildTable(data){
-		var table = document.getElementById('myTable')
-
-		for (var i = 0; i < data.length; i++){
-			var row = `<tr>
-							<td>${data[i].name}</td>
-							<td>${data[i].age}</td>
-							<td>${data[i].rank}</td>
-					  </tr>`
-			table.innerHTML += row
-
-
-		}
-	}
-
-</script>
+            int mid;
+            int ans = right;
+            while(left <= right){
+                mid = (left + right) / 2;
+                if(check(weights, days, mid)){
+                    ans = mid;
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
+            }
+            return ans;
+        }
+    
+        bool check(vector<int>& weights, int days, int capacity){
+            int requiredDays = 1;
+            int currWeight = 0;
+            for(int i : weights){
+                if(currWeight + i > capacity){
+                    requiredDays++;
+                    currWeight = 0;
+                }
+                currWeight += i;
+            }
+            if(requiredDays > days) return false;
+            return true;
+        }
+    };
