@@ -19,7 +19,6 @@ public:
                 right--;
             }
         }
-
         
         return boatCount;
     }
