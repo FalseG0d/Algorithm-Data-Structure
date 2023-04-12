@@ -56,7 +56,6 @@ public:
             
             if(visited.find(curr) != visited.end()) continue;
             
-            
             if(mp.find(curr) != mp.end()) currNew = mp[curr];
             else{
                 currNew = new Node(curr->val);
