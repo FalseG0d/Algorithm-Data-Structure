@@ -1,7 +1,7 @@
 class Solution {
 public:
     set<vector<int>> res;
-    
+
     void help(vector<int>& candidates, vector<int>temp, int pos, int target){
         int N = candidates.size();
         
@@ -9,6 +9,7 @@ public:
             res.insert(temp);
             return;
         }
+        
         if(target < 0) return;
         if(pos == N) return;
         
