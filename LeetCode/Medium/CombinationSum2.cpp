@@ -9,12 +9,14 @@ public:
             res.insert(temp);
             return;
         }
-        
+
         if(target < 0) return;
         if(pos == N) return;
         
         int offset = 1;
+
         while(pos + offset < N && candidates[pos] == candidates[pos + offset]) offset++;
+        
         help(candidates, temp, pos + offset, target);
         temp.push_back(candidates[pos]);
         help(candidates, temp, pos + 1, target - candidates[pos]);
