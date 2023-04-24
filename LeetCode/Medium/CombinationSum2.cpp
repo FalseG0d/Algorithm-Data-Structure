@@ -18,7 +18,9 @@ public:
         while(pos + offset < N && candidates[pos] == candidates[pos + offset]) offset++;
         
         help(candidates, temp, pos + offset, target);
+        
         temp.push_back(candidates[pos]);
+        
         help(candidates, temp, pos + 1, target - candidates[pos]);
     }
     vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
