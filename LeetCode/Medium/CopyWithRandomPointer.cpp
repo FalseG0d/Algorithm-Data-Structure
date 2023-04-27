@@ -43,7 +43,6 @@ public:
             if(itr->random == NULL) mp[itr]->random = NULL;
             else mp[itr]->random = mp[itr->random];
             
-            
             itr = itr->next;
         }
         
