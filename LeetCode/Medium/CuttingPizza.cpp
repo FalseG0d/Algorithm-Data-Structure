@@ -13,8 +13,11 @@ public:
     }
     int dfs(int m, int n, int k, int r, int c, vector<vector<vector<int>>>& dp, vector<vector<int>>& preSum) {
         if (preSum[r][c] == 0) return 0; 
-        if (k == 0) return 1; 
+        
+        if (k == 0) return 1;
+
         if (dp[k][r][c] != -1) return dp[k][r][c];
+        
         int ans = 0;
 
         for (int nr = r + 1; nr < m; nr++) 
