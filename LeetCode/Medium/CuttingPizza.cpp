@@ -2,6 +2,7 @@ class Solution {
 public:
     int ways(vector<string>& pizza, int k) {
         int m = pizza.size(), n = pizza[0].size();
+        
         vector<vector<vector<int>>> dp(vector(k, vector(m, vector(n, -1))));
         vector<vector<int>> preSum(vector(m+1, vector(n+1, 0)));
 
