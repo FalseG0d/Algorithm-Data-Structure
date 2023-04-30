@@ -24,6 +24,7 @@ public:
         for (int nr = r + 1; nr < m; nr++) 
             if (preSum[r][c] - preSum[nr][c] > 0)
                 ans = (ans + dfs(m, n, k - 1, nr, c, dp, preSum)) % 1000000007;
+        
         for (int nc = c + 1; nc < n; nc++) 
             if (preSum[r][c] - preSum[r][nc] > 0)
                 ans = (ans + dfs(m, n, k - 1, r, nc, dp, preSum)) % 1000000007;
