@@ -13,6 +13,7 @@ public:
         return dfs(m, n, k-1, 0, 0, dp, preSum);
     }
     int dfs(int m, int n, int k, int r, int c, vector<vector<vector<int>>>& dp, vector<vector<int>>& preSum) {
+        
         if (preSum[r][c] == 0) return 0; 
         
         if (k == 0) return 1;
