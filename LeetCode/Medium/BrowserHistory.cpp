@@ -28,6 +28,7 @@ public:
 		//2nd condition
         else{
             list.push_back(url);
+            
             idx++;
             maxSize++;
         }
