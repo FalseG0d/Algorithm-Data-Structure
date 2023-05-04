@@ -22,6 +22,7 @@ public:
 	//First condition
         if(list.size()-1>idx){
             list[idx+1]=url;
+            
             idx++;
             maxSize=idx+1;
         }
