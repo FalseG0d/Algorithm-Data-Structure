@@ -11,6 +11,7 @@ public:
 //In BrowserHistory we will simply initialize our vector and idx to 0 and maxSize to one
     BrowserHistory(string homepage) {
         list.push_back(homepage);
+        
         idx=0;
         maxSize=1;
     }
