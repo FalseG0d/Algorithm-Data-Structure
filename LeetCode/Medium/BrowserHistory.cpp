@@ -40,7 +40,7 @@ public:
 		//we will find the val to which we can go back
         int val=min(steps,idx);
 		//substract from the idx
-        
+
         idx-=val;
 		//return the list[idx]
         return list[idx];
@@ -51,6 +51,7 @@ public:
         int val=min(steps,maxSize-idx-1);
 		//add from the idx
         idx+=val;
+        
 		//return the list[idx]
         return list[idx];
     }
