@@ -7,6 +7,7 @@ public:
         
         string word=countAndSay(n-1);
         char itr=word[0];
+        
         int count=0;
         string res;
         
