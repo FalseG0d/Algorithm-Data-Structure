@@ -42,7 +42,6 @@ public:
 		//substract from the idx
 
         idx-=val;
-		//return the list[idx]
         return list[idx];
     }
     
