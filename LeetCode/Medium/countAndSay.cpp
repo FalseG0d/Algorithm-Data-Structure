@@ -15,10 +15,13 @@ public:
             if(word[i]!=itr){
                 stringstream ss;
                 ss<<count;
+
                 res+=ss.str();
                 res+=itr;
+                
                 itr=word[i];
                 count=0;
+                
                 i--;
             }else{
                 count++;
