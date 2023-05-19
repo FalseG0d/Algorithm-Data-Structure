@@ -13,6 +13,7 @@ public:
             if(str == "+" || str == "-" || str == "*" || str == "/"){
                 int x = s.top();
                 s.pop();
+                
                 int y = s.top();
                 s.pop();
                 
