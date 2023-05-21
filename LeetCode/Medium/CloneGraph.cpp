@@ -16,6 +16,7 @@ public:
                 cout<<itr->val<<", ";
                 if(mp.find(itr) == mp.end()) que.push(itr);
             }
+            
             cout<<"\n";
             mp[temp] = true;
         }
@@ -39,6 +40,7 @@ public:
             if(visited.find(curr) != visited.end()) continue;
             
             if(mp.find(curr) != mp.end()) currNew = mp[curr];
+            
             else{
                 currNew = new Node(curr->val);
                 mp[curr] = currNew;
@@ -47,6 +49,7 @@ public:
             for(Node*neighbors:curr->neighbors){
                 Node*temp = NULL;
                 if(mp.find(neighbors) != mp.end()) temp = mp[neighbors];
+                
                 else{
                     temp = new Node(neighbors->val);
                     mp[neighbors] = temp;
