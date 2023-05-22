@@ -27,7 +27,9 @@ public:
                         temp.clear();
                         
                         right--;
-                        while(left < right && nums[right+1] == nums[right]) right--;
+                        while(left < right && nums[right+1] == nums[right]) {
+                            right--;
+                        }
                     }
                     
                     if(nums[left] + nums[right] < target - nums[i] - nums[j]) left++;
