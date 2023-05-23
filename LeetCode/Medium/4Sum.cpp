@@ -20,6 +20,7 @@ public:
                     if(nums[left] + nums[right] == target - nums[i] - nums[j]){
                         temp.push_back(nums[i]);
                         temp.push_back(nums[j]);
+                        
                         temp.push_back(nums[left]);
                         temp.push_back(nums[right]);
                         
