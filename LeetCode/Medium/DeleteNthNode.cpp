@@ -19,7 +19,7 @@ public:
         if(n == 0){
             ListNode* toDel = head -> next;
             head -> next = toDel -> next;
-            
+
             delete(toDel);
         }else{
             help(head -> next, n - 1);
@@ -32,8 +32,8 @@ public:
         if(c == n){
             ListNode*toDel = head;
             ListNode*res = head -> next;
-            delete(toDel);
             
+            delete(toDel);
             return res;
         }
         
