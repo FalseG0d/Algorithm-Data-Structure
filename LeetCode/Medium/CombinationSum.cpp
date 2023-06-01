@@ -14,7 +14,9 @@ public:
         }
         
         help(candidates, temp, cur + 1, target);
+
         temp.push_back(candidates[cur]);
+        
         help(candidates, temp, cur, target - candidates[cur]);
     }
     
