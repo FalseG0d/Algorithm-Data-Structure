@@ -22,6 +22,7 @@ public:
         
         for (int i = 0; i < n - 1; ++i) {
             int req = k - arr[i];
+            
             if (m.count(req) > 0) {
                 vector<int> indicies = m[req];
                 for (auto el : indicies) {
