@@ -13,8 +13,10 @@ string appendAndDelete(string s, string t, int k) {
     
     if(k==count||k>=n1+n2)       // Case 1
     return "Yes";
+    
     else if(count%2==k%2 && count<=k) // Case 2
     return "Yes";
+    
     else               // Case 3
     return "No";
 }
