@@ -9,6 +9,7 @@ int viralAdvertising(int n) {
     
     for(int i=0;i<n;i++){
         s+=x/2;
+
         x/=2;
         x*=3;
     }
@@ -27,7 +28,6 @@ int main()
     int result = viralAdvertising(n);
 
     fout << result << "\n";
-
     fout.close();
 
     return 0;
