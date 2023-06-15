@@ -9,7 +9,7 @@ int viralAdvertising(int n) {
     
     for(int i=0;i<n;i++){
         s+=x/2;
-
+        
         x/=2;
         x*=3;
     }
