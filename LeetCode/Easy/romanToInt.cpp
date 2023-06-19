@@ -26,7 +26,9 @@ public:
                 }
             }else{
                 res+=valueOf(str[i]);
-            }cout<<res<<":"<<i<<"\n";
+            }
+            
+            cout<<res<<":"<<i<<"\n";
         }
         
         return res;
