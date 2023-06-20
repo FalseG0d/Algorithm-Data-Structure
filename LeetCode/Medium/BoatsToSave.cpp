@@ -9,6 +9,7 @@ public:
         
         while(left <= right){
             int sum = people[left] + people[right];
+            
             if(sum <= limit){
                 boatCount++;
                 left++;
