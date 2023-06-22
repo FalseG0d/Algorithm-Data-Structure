@@ -46,6 +46,7 @@ public:
                     
                     s.insert(val(i+1,j,grid,M,N));
                     s.insert(val(i-1,j,grid,M,N));
+                    
                     s.insert(val(i,j+1,grid,M,N));
                     s.insert(val(i,j-1,grid,M,N));
                     
