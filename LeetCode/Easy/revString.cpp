@@ -11,6 +11,7 @@ public:
         
         while(!st.empty()){
             s.push_back(st.top());
+            
             st.pop();
         }
     }
