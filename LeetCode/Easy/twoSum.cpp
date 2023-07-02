@@ -8,7 +8,7 @@ public:
                 if(nums[i]+nums[j]==target){
                     temp.push_back(i);
                     temp.push_back(j);
-                    
+
                     cout<<i<<" "<<j;
                     break;
                 }
@@ -20,9 +20,11 @@ public:
 	vector<int> optimizedTwoSum(vector<int>& nums, int target) {
         map<int,int> maps;
         vector<int> temp;
+        
         for(int i=0;i<nums.size();i++){
             maps[nums[i]]=i;
         }
+        
         for(int i=0;i<nums.size();i++){
             int complement=target-nums[i];
             if(maps[complement]&&maps[complement]!=i){
