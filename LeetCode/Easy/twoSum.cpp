@@ -27,6 +27,7 @@ public:
         
         for(int i=0;i<nums.size();i++){
             int complement=target-nums[i];
+            
             if(maps[complement]&&maps[complement]!=i){
                 temp.push_back(i);
                 temp.push_back(maps[complement]);
