@@ -49,6 +49,7 @@ public:
             headA = headA->next;
             headB = headB->next;
         }
-            return NULL;
+        
+        return NULL;
     }
 };
