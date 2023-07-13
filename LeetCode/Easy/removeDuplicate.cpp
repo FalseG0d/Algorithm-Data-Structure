@@ -8,8 +8,10 @@ public:
     
     v.clear();
         
-    for(auto itr=s.begin();itr!=s.end();++itr)
+    for(auto itr=s.begin();itr!=s.end();++itr) {
         v.push_back(*itr);
+    }
+
     cout<<"\n";
     
     return s.size();
