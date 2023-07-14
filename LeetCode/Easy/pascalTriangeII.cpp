@@ -13,6 +13,7 @@ public:
         for(int i=1;i<prev.size();i++){
             temp.push_back(prev[i-1]+prev[i]);
         }
+        
         temp.push_back(1);
         
         return temp;
