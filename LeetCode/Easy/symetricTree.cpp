@@ -26,8 +26,7 @@ public:
         TreeNode*right=root->right;
         
         if(left==NULL&&right==NULL)return true;
-        if((left==NULL&&right!=NULL)||(left!=NULL&&right==NULL))return false;
-        
+        if((left==NULL&&right!=NULL)||(left!=NULL&&right==NULL)) return false;
         if(left->val!=right->val)return false;
         
         return isMirror(left,right);
