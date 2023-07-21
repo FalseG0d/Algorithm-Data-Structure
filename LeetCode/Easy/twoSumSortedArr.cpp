@@ -7,6 +7,7 @@ public:
             for(int i=0;i<n;i++){
                 if(numbers[i]>=target){
                     n=i+1;
+                    
                     break;
                 }
             }
