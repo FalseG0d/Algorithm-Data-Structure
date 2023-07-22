@@ -18,10 +18,10 @@ public:
         int carry=0;
         
         while(a!=NULL||b!=NULL){
-            int x=a!=NULL?a->val:0;
-            int y=b!=NULL?b->val:0;
-            
+            int x = a != NULL ? a->val : 0;
+            int y = b != NULL ? b->val : 0;
             int temp=x+y+carry;
+
             carry=temp/10;
             temp%=10;
             
