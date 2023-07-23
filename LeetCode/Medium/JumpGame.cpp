@@ -10,9 +10,11 @@ public:
             if (nums[i] >= minK && nums[i] <= maxK) {
                 lastMin = (nums[i] == minK) ? i : lastMin;
                 lastMax = (nums[i] == maxK) ? i : lastMax;
+
                 count += max(0, min(lastMin, lastMax) - leftBound);
             } else {
                 leftBound = i;
+                
                 lastMin = -1;
                 lastMax = -1;
             }
