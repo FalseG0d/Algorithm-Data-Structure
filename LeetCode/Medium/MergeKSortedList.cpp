@@ -17,9 +17,8 @@ public:
         for(ListNode*ele:lists){
             while(ele!=NULL){
                 temp.push_back(ele->val);
-                // cout<<ele->val<<" ";
                 ele=ele->next;
-            }//cout<<"\n";
+            }
         }
         
         if(temp.size()==0)return NULL;
