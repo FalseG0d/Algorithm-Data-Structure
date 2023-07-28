@@ -2,9 +2,9 @@
 class Solution {
 public:
     vector<int> shortestAlternatingPaths(int n, vector<vector<int>>& red_edges, vector<vector<int>>& blue_edges){
-
         vector<int> res(n, -1), v1(n, 0), v2(n, 0);
         vector<vector<pair<int, int>>> vp(n);
+        
         queue<pair<int, int>> q;
 
         for(auto &it : red_edges) vp[it[0]].push_back({it[1], 1});
