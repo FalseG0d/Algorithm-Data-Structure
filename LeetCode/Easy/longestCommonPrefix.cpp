@@ -11,6 +11,7 @@ public:
         
         for(int itr=0;itr<maxLen;itr++){
             bool flag=true;
+            
             for(int i=0;i<strs.size()-1;i++){
                 if(strs[i][itr]!=strs[i+1][itr])return strs[i].substr(0,itr);
                 else {
