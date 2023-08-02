@@ -4,6 +4,7 @@ public:
     NumArray(vector<int>& nums) {
         arr.push_back(0);
         arr.push_back(nums[0]);
+        
         int N = nums.size();
         
         for(int i=1;i<N;i++) arr.push_back(nums[i] + arr[i]);
