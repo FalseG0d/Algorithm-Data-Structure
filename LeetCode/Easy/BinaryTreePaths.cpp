@@ -12,6 +12,7 @@
 class Solution {
 public:
     vector<string>res;
+    
     void help(TreeNode* root, string path){
         if(root == NULL) return;
         
