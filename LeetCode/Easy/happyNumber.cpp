@@ -11,12 +11,14 @@ public:
             mp[n]++;
             
             res=0;
+
             while(n>0){
                 temp=n%10;
                 n/=10;
                 
                 res+=(temp*temp);
             }
+            
             n=res;
             // cout<<n<<" ";
         }
