@@ -19,6 +19,7 @@ public:
             for(int j=i+1;j<n;j++){
                 if(sum==numbers[j]){
                     vector<int>res={i+1,j+1};
+                    
                     return res;
                 }
             }
