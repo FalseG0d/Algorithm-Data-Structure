@@ -6,7 +6,8 @@ public:
         for(int i=0;i<str.length();i++){
             if(str[i]=='('||str[i]=='['||str[i]=='{'){
                 s.push(str[i]);
-            }else{
+            }
+            else{
                 if(s.empty())return false;
                 
                 if(str[i]==')'&&s.top()=='(')s.pop();
