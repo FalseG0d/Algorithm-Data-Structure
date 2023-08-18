@@ -26,8 +26,8 @@ public:
 
             for(int i=0;i<N;i++) {
                 TreeNode*tempNode = que.front();
+                
                 que.pop();
-
                 temp.push_back(tempNode->val);
                 
                 if(tempNode->left) que.push(tempNode->left);
