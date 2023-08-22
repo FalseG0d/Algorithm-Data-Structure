@@ -15,9 +15,13 @@ public:
         
         ListNode* curr = head;
         ListNode* next = head -> next;
+
         if(next == NULL) return;
+        
         help(next -> next);
+        
         int temp = curr -> val;
+        
         curr -> val = next -> val;
         next -> val = temp;
     }
