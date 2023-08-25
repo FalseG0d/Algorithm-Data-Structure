@@ -5,6 +5,7 @@ public:
     void help(vector<int>v,int pos){
         if(pos==v.size()-1){
             res.push_back(v);
+
             return;
         }
         
@@ -13,6 +14,8 @@ public:
             help(v,pos+1);
             swap(v[pos],v[i]);
         }
+
+        return;
     }
     
     vector<vector<int>> permute(vector<int>& nums) {
