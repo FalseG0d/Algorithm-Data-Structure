@@ -11,7 +11,8 @@ public:
                 count+=mid/time[i];  // checking if that mid can fultill totaltrips or not by adding all 
             //  possible no of trips performed by all buses with mid time 
                 
-            } 
+            }
+            
             if(count>=totalTrips){
                 ans=min(ans,mid); // minimising time
                 right=mid;
