@@ -13,9 +13,11 @@ public:
         queue<int> q;
         q.emplace(1);
         int ans = INT_MAX;
+        
         for(; !q.empty(); q.pop()) {
             int from = q.front();
             vis[from] = 1;
+            
             for(const auto &[to, val] : adj[from]) {
                 if(!vis[to]) {
                     ans = min(ans, val);
