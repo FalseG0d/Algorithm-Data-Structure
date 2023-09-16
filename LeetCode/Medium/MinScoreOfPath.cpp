@@ -11,6 +11,7 @@ public:
         }
         vector<int> vis(n + 1, 0);
         queue<int> q;
+        
         q.emplace(1);
         int ans = INT_MAX;
         
