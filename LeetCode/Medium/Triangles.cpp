@@ -12,6 +12,7 @@ public:
         }
         
         int res = INT_MAX;
+        
         for(int x:triangle[levels-1]){
             res = min(res, x);
         }
