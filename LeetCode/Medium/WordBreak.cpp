@@ -21,6 +21,7 @@ public:
     }
     bool wordBreak(string s, vector<string>& wordDict) {
         dp = new int[s.length() + 1];
+        
         for(int i=0;i<=s.length();i++) dp[i] = -1;
         
         help(s, wordDict, 0);
