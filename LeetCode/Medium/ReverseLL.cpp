@@ -13,6 +13,7 @@ public:
     ListNode* reverseBetween(ListNode* head, int left, int right) {
         vector<int>v;
         ListNode*itr=head;
+        
         while(itr){
             v.push_back(itr->val);
             itr=itr->next;
