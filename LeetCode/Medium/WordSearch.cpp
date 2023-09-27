@@ -29,6 +29,7 @@ public:
         N = board[0].size();
         
         visited = new bool*[M];
+        
         for(int i=0;i<M;i++) visited[i] = new bool[N]{false};
         
         bool res = false;
