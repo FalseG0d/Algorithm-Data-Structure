@@ -47,7 +47,6 @@ public:
         
         while(head != NULL){
             v[itr] = head->val;
-            
             itr++;
             head = head->next;
         }
