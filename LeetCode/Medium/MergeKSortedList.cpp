@@ -12,6 +12,7 @@ class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
         if(lists.size()==0)return NULL;
+        
         vector<int>temp;
         
         for(ListNode*ele:lists){
