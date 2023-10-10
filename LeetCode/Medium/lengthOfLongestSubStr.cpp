@@ -4,6 +4,7 @@ public:
         if(s.length()==1)return 1;
         
         int res=0;
+        
         string str="";
         map<char,int>mp;
         
