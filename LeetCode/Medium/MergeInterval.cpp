@@ -3,7 +3,6 @@ public:
     vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
         vector<vector<int>> res;
         int N = intervals.size();
-        
         int i = 0;
 
         while(i < N && intervals[i][1] < newInterval[0]) res.push_back(intervals[i++]);
