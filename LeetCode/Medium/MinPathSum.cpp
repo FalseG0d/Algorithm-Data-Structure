@@ -5,6 +5,7 @@ public:
         int N = grid[0].size();
         
         grid.push_back(vector<int>(N+1,1000));
+        
         for(int i=0;i<M;i++) grid[i].push_back(1000);
         
         // for(vector v : grid){
