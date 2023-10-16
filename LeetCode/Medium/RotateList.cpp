@@ -39,6 +39,7 @@ public:
         
         return res;
     }
+    
     ListNode* help(ListNode* head, int k){
         if(k == 0) return head;
         
