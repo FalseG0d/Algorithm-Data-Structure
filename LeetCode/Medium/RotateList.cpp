@@ -39,7 +39,7 @@ public:
         
         return res;
     }
-    
+
     ListNode* help(ListNode* head, int k){
         if(k == 0) return head;
         
@@ -56,6 +56,7 @@ public:
         if(head == NULL) return head;
         
         int l = len(head);
+        
         k %= l;
         
         return help(head, k);
