@@ -2,6 +2,7 @@ class Solution {
 public:
     int singleNonDuplicate(vector<int>& nums) {
         int N = nums.size();
+        
         if(N == 1) return nums[0];
         
         int beg = 0;
