@@ -12,6 +12,7 @@ class Solution {
 public:
     int count(ListNode*head){
         if(head == NULL) return 0;
+        
         return 1 + count(head -> next);
     }
     
