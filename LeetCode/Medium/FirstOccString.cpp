@@ -3,7 +3,6 @@ public:
     int strStr(string haystack, string needle) {
         int beg = 0;
         int end = needle.length() - 1;
-
         int key = 0;
         int chk = 0;
 
