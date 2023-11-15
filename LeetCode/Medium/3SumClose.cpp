@@ -8,7 +8,6 @@ public:
 
         for(int i=0;i<N;i++) {
             int to_make = target - nums[i];
-
             int beg = 0;
             int end = N - 1;
 
