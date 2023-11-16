@@ -14,10 +14,12 @@ public:
             while(beg < end) {
                 if(beg == i) {
                     beg++;
+                    
                     continue;
                     }
                 if(end == i) {
                     end--;
+                    
                     continue;
                     }
 
