@@ -24,11 +24,10 @@ public:
 
             carry=temp/10;
             temp%=10;
-            
             res->val=temp;
             
-            a=a!=NULL?a->next:a;
-            b=b!=NULL?b->next:b;
+            a = a!= NULL ? a->next : a;
+            b = b!= NULL ? b->next : b;
             
             if(a!=NULL||b!=NULL){
                 res->next=new ListNode();
