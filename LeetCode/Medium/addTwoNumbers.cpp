@@ -32,8 +32,7 @@ public:
             if(a!=NULL||b!=NULL){
                 res->next=new ListNode();
                 res=res->next;
-                }
-            // cout<<temp<<"\n";
+            }
         }
         if(carry>0)res->next=new ListNode(carry);
         
