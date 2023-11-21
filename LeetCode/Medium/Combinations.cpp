@@ -5,7 +5,6 @@ public:
     void help(int beg, const int& end, int k, vector<int> temp){        
         if(k == 0){
             res.push_back(temp);
-            return;
         }
         
         for(int i=beg;i<=end;i++){
