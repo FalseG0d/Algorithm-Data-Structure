@@ -12,6 +12,7 @@ public:
             if(val == arr[itr]) itr++;
             else {
                 k--;
+                
                 if(k == 0) break;
                 }
 
