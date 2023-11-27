@@ -5,6 +5,7 @@ public:
     void help(string curr, int open, int close, int max){
         if(curr.length() == 2 * max){
             res.push_back(curr);
+            
             return;
             }
         
