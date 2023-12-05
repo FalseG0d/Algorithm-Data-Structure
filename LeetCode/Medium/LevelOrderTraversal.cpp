@@ -36,6 +36,7 @@ public:
                     s.push(curr->left);
                     currSize++;
                 }
+                
                 if(curr->right!= NULL){
                     s.push(curr->right);
                     currSize++;
