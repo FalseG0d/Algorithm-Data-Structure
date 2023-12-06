@@ -28,8 +28,8 @@ public:
             
             for(int i=0;i<size;i++){
                 TreeNode*curr = s.front();
-                s.pop();
                 
+                s.pop();
                 temp.push_back(curr->val);
                 
                 if(curr->left != NULL){
