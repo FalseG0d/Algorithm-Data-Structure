@@ -9,6 +9,7 @@ public:
             adj[i[0]].emplace_back(make_pair(i[1], i[2]));
             adj[i[1]].emplace_back(make_pair(i[0], i[2]));
         }
+        
         vector<int> vis(n + 1, 0);
         queue<int> q;
         
