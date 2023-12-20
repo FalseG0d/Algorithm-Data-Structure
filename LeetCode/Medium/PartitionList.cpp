@@ -22,13 +22,11 @@ public:
         auto itr = head;
         
         for(int ele:lesser){
-            itr->val = ele;
-            
+            itr->val = ele;            
             itr = itr -> next;
         }
         for(int ele:greater){
-            itr->val = ele;
-            
+            itr->val = ele;            
             itr = itr -> next;
         }
         
