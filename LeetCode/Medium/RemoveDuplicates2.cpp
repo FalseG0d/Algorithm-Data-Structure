@@ -2,7 +2,6 @@ class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
         int N = nums.size();
-        
         map<int,int>mp;
         
         for(auto itr=nums.begin();itr!=nums.end();++itr){
