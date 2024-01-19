@@ -56,7 +56,6 @@ public:
         if(head == NULL) return head;
         
         int l = len(head);
-        
         k %= l;
         
         return help(head, k);
