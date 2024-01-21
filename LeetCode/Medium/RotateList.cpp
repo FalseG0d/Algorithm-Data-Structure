@@ -48,6 +48,7 @@ public:
         if(val == -1000) return head;
         
         ListNode* newHead = new ListNode(val);
+        
         newHead -> next = head;
         
         return help(newHead, k - 1);
