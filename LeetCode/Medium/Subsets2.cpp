@@ -1,29 +1,5 @@
 class Solution {
-public:
-    
-//     struct comparator{
-//         bool operator()(const vector<int>&v1,const vector<int>&v2) const{
-//             int s1 = 0;
-//             int s2 = 0;
-
-//             int multi = 1;
-
-//             for(int ele : v1){
-//                 s1 += ele * multi;
-//                 multi *= 10;
-//             }
-
-//             multi = 1;
-
-//             for(int ele : v2){
-//                 s2 += ele * multi;
-//                 multi*=10;
-//             }
-
-//             return s1 < s2;
-//         }
-//     };
-    
+public:    
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
         vector<vector<int>> tmpRes;
         vector<int>temp;
