@@ -10,11 +10,10 @@ public:
         
         for(int ele : nums){
             int n = tmpRes.size();
+
             for(int i=0;i<n;i++){
-                tmpRes[i].push_back(ele);
-                
+                tmpRes[i].push_back(ele);    
                 tmpRes.push_back(tmpRes[i]);
-                
                 tmpRes[i].pop_back();
             }
         }
