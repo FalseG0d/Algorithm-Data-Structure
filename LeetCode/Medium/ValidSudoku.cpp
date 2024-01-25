@@ -9,6 +9,7 @@ public:
             
             if(board[i][q] == check) return false;
         }
+        
         for(int i=0;i<N;i++){
             if(i == q) continue;
             
