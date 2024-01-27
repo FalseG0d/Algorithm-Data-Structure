@@ -16,7 +16,6 @@ public:
         
         vector<vector<int>> res;
         queue<TreeNode*>que;
-        
         int level = 0;
 
         que.push(root);
