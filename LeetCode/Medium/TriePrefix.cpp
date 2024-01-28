@@ -3,6 +3,7 @@ namespace my{
         private:
             bool end;
             vector<TreeNode*> child;
+            
         public:
             TreeNode(){
                 this->end = false;
