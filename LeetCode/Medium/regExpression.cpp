@@ -6,8 +6,7 @@ class Solution {
 
         if (pattern.length() >= 2 && pattern.charAt(1) == '*'){
             return (isMatch(text, pattern.substring(2)) || (first_match && isMatch(text.substring(1), pattern)));
-        }
-        else {
+        } else {
             return first_match && isMatch(text.substring(1), pattern.substring(1));
         }
     }
