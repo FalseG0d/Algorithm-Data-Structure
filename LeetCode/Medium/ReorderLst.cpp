@@ -13,8 +13,10 @@ public:
     ListNode*reverse(ListNode* itr){
         ListNode*prev = itr;
         itr = itr->next;
+        
         ListNode*next = itr->next;
         prev->next = NULL;
+        
         while(next != NULL){
             itr->next = prev;
             
@@ -22,6 +24,7 @@ public:
             itr = next;
             next = next->next;
         }
+        
         itr->next = prev;
         // prev->next = NULL;
         
@@ -32,6 +35,7 @@ public:
             cout<<itr->val<<"->";
             itr = itr->next;
         }
+        
         cout<<"\n";
     }
     void reorderList(ListNode* head) {
