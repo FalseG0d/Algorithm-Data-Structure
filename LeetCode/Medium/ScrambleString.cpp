@@ -38,7 +38,6 @@ public:
         //2.we should swap before looking next
         for(int i=1;i<n;i++)
         {
-
             //ex of without swap: gr|eat and rg|eat
             bool withoutswap = (
                 //left part of first and second string
