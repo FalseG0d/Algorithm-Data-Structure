@@ -9,6 +9,7 @@ public:
         
         return x;
     }
+    
     vector<string> restoreIpAddresses(string s) {
         vector<string> res;
         
