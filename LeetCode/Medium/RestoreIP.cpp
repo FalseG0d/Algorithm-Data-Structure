@@ -4,12 +4,13 @@ public:
         if(s.length() > 1 && s[0] == '0') return 256;
         
         stringstream ss(s);
+        
         int x = 0;
         ss>>x;
         
         return x;
     }
-    
+
     vector<string> restoreIpAddresses(string s) {
         vector<string> res;
         
