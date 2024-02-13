@@ -27,8 +27,7 @@ public:
         if(left->val < right->val){
             res = left;
             left = left->next;
-        }
-        else {
+        } else {
             res = right;
             right = right->next;
         }
