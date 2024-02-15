@@ -35,10 +35,10 @@ public:
         ListNode*itr = res;
         
         while(left && right){
-            if(left->val < right->val){
+            if(left->val < right->val) {
                 itr->next = left;
                 left = left->next;
-            }else{
+            }else {
                 itr->next = right;
                 right = right->next;
             }
