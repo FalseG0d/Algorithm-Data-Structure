@@ -3,7 +3,6 @@ public:
     void setZeroes(vector<vector<int>>& matrix) {
         int M = matrix.size();
         int N = matrix[0].size();
-        
         bool*rowToZero = new bool[M]{false};
         bool*colToZero = new bool[N]{false};
         
