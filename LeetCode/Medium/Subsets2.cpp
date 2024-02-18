@@ -19,6 +19,7 @@ public:
         }
         
         set<vector<int>>res(tmpRes.begin(), tmpRes.end());
+        
         return vector<vector<int>>(res.begin(),res.end());
     }
 };
