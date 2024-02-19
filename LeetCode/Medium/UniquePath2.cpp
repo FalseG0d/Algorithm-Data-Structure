@@ -3,8 +3,8 @@ public:
     int uniquePathsWithObstacles(vector<vector<int>>& grid) {
         int M = grid.size();
         int N = grid[0].size();
-        
         long long**dp = new long long*[M];
+        
         for(int i=0;i<M;i++) dp[i] = new long long[N];
         
         bool blocked = false;
