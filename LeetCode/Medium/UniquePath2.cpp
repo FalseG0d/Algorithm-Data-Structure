@@ -4,7 +4,7 @@ public:
         int M = grid.size();
         int N = grid[0].size();
         long long**dp = new long long*[M];
-        
+
         for(int i=0;i<M;i++) dp[i] = new long long[N];
         
         bool blocked = false;
@@ -27,6 +27,7 @@ public:
             for(int j=N-2;j>=0;j--){                
                 if(grid[i][j] == 1){
                     dp[i][j] = 0;
+                    
                     continue;
                 }
                 
