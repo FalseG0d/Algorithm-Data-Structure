@@ -27,7 +27,7 @@ public:
             for(int j=N-2;j>=0;j--){                
                 if(grid[i][j] == 1){
                     dp[i][j] = 0;
-                    
+
                     continue;
                 }
                 
@@ -35,8 +35,6 @@ public:
                 
                 long long rght = j + 1 < N ? dp[i][j+1] : 0;
                 long long down = i + 1 < M ? dp[i+1][j] : 0;
-                
-                // cout<<i<<" "<<j<<"\n";
                 
                 dp[i][j] = rght + down;
             }
