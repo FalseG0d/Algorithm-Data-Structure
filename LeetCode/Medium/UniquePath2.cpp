@@ -16,6 +16,7 @@ public:
         }
         
         blocked = false;
+        
         for(int i=N-1;i>=0;i--){
             if(grid[M-1][i] == 1) blocked = true;
             
