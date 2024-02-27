@@ -7,7 +7,6 @@ public:
         
         int itr = 0;
         int N = nums.size();
-        
         int curr = 0;
         
         while(itr < N){
