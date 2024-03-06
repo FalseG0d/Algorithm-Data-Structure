@@ -17,8 +17,6 @@ public:
         if(left == right)return {new TreeNode(left)};
         if(left > right) return {NULL};
         
-        
-        
         for(int i=left;i<=right;i++){
             vector<TreeNode*>leftNodes   = help(left,i-1);
             vector<TreeNode*>rightNodes  = help(i+1,right);
