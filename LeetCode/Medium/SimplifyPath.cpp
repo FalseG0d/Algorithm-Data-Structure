@@ -6,7 +6,6 @@ public:
         for(int i=0;i<N;i++) if(path[i] == '/') path[i] = ' ';
         
         stringstream ss(path);
-        
         string str="";
         vector<string>tree;
         
