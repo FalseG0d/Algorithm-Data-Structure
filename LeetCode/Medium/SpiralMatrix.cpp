@@ -5,13 +5,10 @@ public:
         
         int M = matrix.size();
         int N = matrix[0].size();
-        
         int rowBeg = 0;
         int rowEnd = M - 1;
-        
         int colBeg = 0;
         int colEnd = N - 1;
-        
         int dir = 0;
         
         while(res.size() < M * N){
