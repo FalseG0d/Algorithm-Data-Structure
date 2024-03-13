@@ -32,9 +32,7 @@ public:
             
             temp.push_back(top->val);
             que.pop();
-
             size--;
-            
             
             if(size == 0){
                 if(level % 2 == 1) reverse(temp.begin(),temp.end());
