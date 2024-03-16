@@ -7,6 +7,7 @@ public:
         
         stringstream ss(path);
         string str="";
+        
         vector<string>tree;
         
         while(ss>>str){
