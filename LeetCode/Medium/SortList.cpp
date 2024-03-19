@@ -41,7 +41,6 @@ public:
         if(head == NULL) return NULL;
         
         int N = getSize(head);
-        
         vector<int>v(N, 0);
         int itr = 0;
         
