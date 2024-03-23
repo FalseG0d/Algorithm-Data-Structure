@@ -5,10 +5,8 @@ public:
         
         int rowBeg = 0;
         int rowEnd = n - 1;
-        
         int colBeg = 0;
         int colEnd = n - 1;
-        
         int dir = 0;
         int itr = 1;
         
