@@ -15,6 +15,7 @@ public:
         if(root->left == NULL && root->right == NULL) return parent * 10 + root->val;
         
         int curr = root->val + 10 * parent;
+        
         int left = 0;
         int right = 0;
         
