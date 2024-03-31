@@ -3,12 +3,15 @@ class Solution {
         int shipWithinDays(vector<int>& weights, int days) {
             int left = 0;
             int right = 0;
+            
             for(int i : weights){
                 left = max(left, i);
                 right += i;
             }
+
             int mid;
             int ans = right;
+            
             while(left <= right){
                 mid = (left + right) / 2;
                 if(check(weights, days, mid)){
