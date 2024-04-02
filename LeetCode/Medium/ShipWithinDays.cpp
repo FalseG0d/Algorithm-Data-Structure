@@ -27,6 +27,7 @@ class Solution {
         bool check(vector<int>& weights, int days, int capacity){
             int requiredDays = 1;
             int currWeight = 0;
+
             for(int i : weights){
                 if(currWeight + i > capacity){
                     requiredDays++;
@@ -34,7 +35,9 @@ class Solution {
                 }
                 currWeight += i;
             }
+            
             if(requiredDays > days) return false;
+            
             return true;
         }
     };
