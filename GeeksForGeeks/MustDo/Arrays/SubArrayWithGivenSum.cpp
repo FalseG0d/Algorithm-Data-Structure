@@ -1,40 +1,39 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 class Solution
 {
     public:
     //Function to find a continuous sub-array which adds up to a given number.
-    vector<int> subarraySum(int arr[], int N, int s)
+    vector<int> subarraySum(vector<int>arr, int n, long long s)
     {
         // Your code here
-        int beg=-1;
-        int end=-1;
+        long long sum = 0;
+        int beg = 0;
+        int end = 0;
         
-        while(beg < N && end < N){
-            if(s == 0) break;
-            else if(s > 0) s -= arr[++end];
-            else s += arr[++beg];
+        sum = arr[0];
+        
+        
+        while(beg < n && end < n) {
+            if(beg > end) {
+                beg = end = end + 1;
+                sum = arr[end];
+            }
             
-            // cout<<s<<"\n";
+            if(sum == s) return {beg + 1, end + 1};
+            else if(sum < s) sum += arr[++end];
+            else sum -= arr[beg++];
         }
         
-        vector<int>res;
-        
-        if(s != 0) res.push_back(-1);
-        else{
-            res.push_back(beg + 2);
-            res.push_back(end + 1);
-        }
-        
-        return res;
+        return {-1};
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 int main()
  {
@@ -45,10 +44,13 @@ int main()
         int n;
         long long s;
         cin>>n>>s;
-        int arr[n];
-        
+        vector<int>arr(n);
+        // int arr[n];
+        const int mx = 1e9;
         for(int i=0;i<n;i++)
+        {
             cin>>arr[i];
+        }
         Solution ob;
         vector<int>res;
         res = ob.subarraySum(arr, n, s);
@@ -59,4 +61,5 @@ int main()
         
     }
 	return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
