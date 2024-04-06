@@ -1,65 +1,65 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 
 
-
- // } Driver Code Ends
-//User function template for C++
-class Solution{
-public:	
-	
-	int countTriplet(int arr[], int N)
-	{
-	    // Your code goes here
-	    int count = 0;
-	    
-	    sort(arr,arr + N);
-	    
-	    for(int i=N-1;i>=2;i--){
-	        int j = 0;
-	        int k = i - 1;
-	        
-	        while(j < k){
-	            if(arr[i] == arr[j] + arr[k]){
-	                count++;
-	                
-	                j++;
-	                k--;
-	            }else if(arr[i] > arr[j] + arr[k]) j++;
-	            else k--;
-	        }
-	    }
-	    
-	    return count;
-	}
+// } Driver Code Ends
+class Solution
+{
+    public:
+    //Function to find a continuous sub-array which adds up to a given number.
+    vector<int> subarraySum(vector<int>arr, int n, long long s)
+    {
+        // Your code here
+        long long sum = 0;
+        int beg = 0;
+        int end = 0;
+        
+        sum = arr[0];
+        
+        
+        while(beg < n && end < n) {
+            if(beg > end) {
+                beg = end = end + 1;
+                sum = arr[end];
+            }
+            
+            if(sum == s) return {beg + 1, end + 1};
+            else if(sum < s) sum += arr[++end];
+            else sum -= arr[beg++];
+        }
+        
+        return {-1};
+    }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
-
-int main() 
-{
-   	
-   	ios_base::sync_with_stdio(0);
-    cin.tie(NULL);
-    cout.tie(NULL);
-   
-   	int t;
-    cin >> t;
-    while (t--)
+int main()
+ {
+    int t;
+    cin>>t;
+    while(t--)
     {
         int n;
-        cin >> n;
-
-        int arr[n];
-        for(int i = 0; i < n; i++)
-        	cin >> arr[i];
-
+        long long s;
+        cin>>n>>s;
+        vector<int>arr(n);
+        // int arr[n];
+        const int mx = 1e9;
+        for(int i=0;i<n;i++)
+        {
+            cin>>arr[i];
+        }
         Solution ob;
-        cout << ob.countTriplet(arr, n) << "\n";
-
+        vector<int>res;
+        res = ob.subarraySum(arr, n, s);
+        
+        for(int i = 0;i<res.size();i++)
+            cout<<res[i]<<" ";
+        cout<<endl;
+        
     }
-
-    return 0;
-}  // } Driver Code Ends
+	return 0;
+}
+// } Driver Code Ends

@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 // Initial template for C++
 
 #include <bits/stdc++.h>
@@ -7,24 +7,23 @@ using namespace std;
 
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 // User function template for C++
 
 class Solution{
   public:
-    int MissingNumber(vector<int>& array, int n) {
+    int missingNumber(vector<int>& array, int n) {
         // Your code goes here
-        long long sum = 0;
+        int sum = 1;
         
-        for(int ele:array) sum += ele;
+        for(int i=2;i<=n;i++) sum ^= i;
+        for(int i=0;i<n-1;i++) sum ^= array[i];
         
-        long long actSum = (n) * (n+1) / 2;
-        
-        return actSum - sum;
+        return sum;
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 int main() {
     int t;
@@ -36,7 +35,8 @@ int main() {
         vector<int> array(n - 1);
         for (int i = 0; i < n - 1; ++i) cin >> array[i];
         Solution obj;
-        cout << obj.MissingNumber(array, n) << "\n";
+        cout << obj.missingNumber(array, n) << "\n";
     }
     return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
