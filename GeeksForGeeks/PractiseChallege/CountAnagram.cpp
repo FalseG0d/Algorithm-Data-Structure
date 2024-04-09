@@ -39,8 +39,7 @@ public:
 	    
 	    while(end < N){
 	        while(end - beg < K) check += txt[end++];
-	        
-	       // cout<<hash<<" : "<<check<<" : "<<txt.substr(beg, K)<<"\n";
+			
 	        if(hash == check) res += isAna(pat, txt.substr(beg, K));
 	        
 	        check -= txt[beg];
