@@ -17,7 +17,6 @@ public:
         ListNode*forw = head->next;
 
         curr->next = swapPairs(forw->next);
-
         forw->next = curr;
 
         return forw;
