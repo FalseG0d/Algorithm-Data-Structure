@@ -7,7 +7,8 @@ public:
         while (i <= mid && j <= right) {
             if (nums[i] <= nums[j]) {
                 temp[k++] = nums[i++];
-            } else {
+            }
+            else {
                 temp[k++] = nums[j++];
             }
         }
