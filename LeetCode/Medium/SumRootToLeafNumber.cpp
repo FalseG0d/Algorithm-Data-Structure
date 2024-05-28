@@ -10,20 +10,22 @@
  * };
  */
 class Solution {
-    int res = 0;
 public:
-    int help(TreeNode* root) {
+    int help(TreeNode* root, int parent) {
         if(root == NULL) return 0;
 
-        int left = help(root->left);
-        int right = help(root->right);
+        int curr = parent * 10 + root->val;
+        
+        if(root->left == NULL && root->right == NULL) return curr;
+        
+        int res = 0;
 
-        res = max(res, 1 + left + right);
+        res += help(root->left, curr);
+        res += help(root->right, curr);
 
-        return 1 + max(left, right);
+        return res;
     }
-    int diameterOfBinaryTree(TreeNode* root) {
-        help(root);
-        return res - 1;
+    int sumNumbers(TreeNode* root) {
+        return help(root, 0);
     }
 };

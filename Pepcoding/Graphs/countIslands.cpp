@@ -1,51 +1,34 @@
-#include <iostream>
-#include <vector>
+class Solution {
+    int M = 0;
+    int N = 0;
+public:
+    void sinkIsland(vector<vector<char>>& grid, int p, int q) {
+        if(p == M || q == N || p < 0 || q < 0) return;
+        if(grid[p][q] == '0') return;
 
-using namespace std;
+        grid[p][q] = '0';
 
-void drawComp(vector<vector<int>>arr,int i,int j,bool**visited){
-    if(i<0 || j<0 || i>=arr.size() || j>=arr[0].size()) return;
-    if(arr[i][j] == 1 || visited[i][j]) return;
-    
-    visited[i][j] = true;
-
-    drawComp(arr,i+1,j,visited);
-    drawComp(arr,i-1,j,visited);
-    drawComp(arr,i,j+1,visited);
-    drawComp(arr,i,j-1,visited);
-}
-
-int main() {
-    int m,n;
-    cin>>m>>n;
-
-    vector<vector<int>>arr(m);
-    for(int i=0;i<m;i++) arr[i]=vector<int>(n);
-
-    for(int i=0;i<m;i++){
-        for(int j=0;j<n;j++) cin>>arr[i][j];
+        sinkIsland(grid, p+1, q);
+        sinkIsland(grid, p, q+1);
+        sinkIsland(grid, p-1, q);
+        sinkIsland(grid, p, q-1);
     }
 
-    bool**visited=new bool*[m];
-    for(int i=0;i<m;i++) visited[i]=new bool[n];
+    int numIslands(vector<vector<char>>& grid) {
+        M = grid.size();
+        N = grid[0].size();
 
-    for(int i=0;i<m;i++){
-        for(int j=0;j<n;j++) visited[i][j]=false;
-    }
+        int count = 0;
 
-    int count=0;
-
-    for(int i=0;i<m;i++){
-        for(int j=0;j<n;j++){
-            if(arr[i][j]==0 && !visited[i][j]){
-                count++;
-                drawComp(arr,i,j,visited);
+        for(int i=0;i<M;i++) {
+            for(int j=0;j<N;j++) {
+                if(grid[i][j] == '1') {
+                    count++;
+                    sinkIsland(grid, i, j);
+                    }
             }
-            // cout<<arr[i][j]<<" ";
-        }//cout<<"\n";
+        }
+
+        return count;
     }
-
-    cout<<count;
-
-    return 0;
-}
+};
