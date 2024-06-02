@@ -1,4 +1,4 @@
-/**
+ /**
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
@@ -12,10 +12,43 @@
 class Solution {
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
-        if((p==NULL&&q!=NULL)||(p!=NULL&&q==NULL))return false;
-        if(p==NULL&&q==NULL)return true;
-        if(p->val!=q->val)return false;
+        if(p == NULL && q == NULL) return true;
         
-        return isSameTree(p->left,q->left) && isSameTree(p->right,q->right);
+        if(p == NULL) return false;
+        if(q == NULL) return false;
+        
+        queue<TreeNode*>pQue;
+        queue<TreeNode*>qQue;
+        
+        pQue.push(p);
+        qQue.push(q);
+
+        while(!pQue.empty() && !qQue.empty()) {
+            TreeNode*pTop = pQue.front();
+            TreeNode*qTop = qQue.front();
+            
+            if(pTop == NULL && qTop == NULL) {
+                pQue.pop();
+                qQue.pop();
+
+                continue;
+            }
+            else if(pTop == NULL) break;
+            else if(qTop == NULL) break;
+
+            if(pTop->val != qTop->val) break;
+            
+            pQue.pop();
+            qQue.pop();
+            
+            
+            pQue.push(pTop->left);
+            qQue.push(qTop->left);
+            
+            pQue.push(pTop->right);
+            qQue.push(qTop->right);
+        }
+
+        return pQue.size() == 0 && qQue.size() == 0;
     }
 };
