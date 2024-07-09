@@ -5,6 +5,7 @@ public:
     {
         if(beg >= end) return 0;
         if(dp[beg][end] != -1) return dp[beg][end];
+        
         int res = INT_MAX;
         
         for(int k=beg;k<end;k++) {
