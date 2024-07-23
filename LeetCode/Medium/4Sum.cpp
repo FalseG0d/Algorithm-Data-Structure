@@ -1,46 +1,37 @@
 class Solution {
 public:
-    vector<vector<int>> fourSum(vector<int>& nums, int target) {
-        sort(nums.begin(),nums.end());
-        
-        vector<vector<int>>res;
+    vector<vector<int>> fourSum(vector<int>& nums, int sum) {
         int N = nums.size();
-        
-        for(int i=0;i<N-3;i++){
-            // if(i > 0 && nums[i] == nums[i-1]) continue;
-            
-            for(int j=i+1;j<N-2;j++){
-                // if(nums[j] == nums[j-1]) continue;
-                
-                int left = j+1;
-                int right= N-1;
-                
-                vector<int>temp;
-                while(left < right){
-                    if(nums[left] + nums[right] == target - nums[i] - nums[j]){
-                        temp.push_back(nums[i]);
-                        temp.push_back(nums[j]);
-                        
-                        temp.push_back(nums[left]);
-                        temp.push_back(nums[right]);
-                        
-                        res.push_back(temp);
-                        temp.clear();
-                        
-                        right--;
-                        while(left < right && nums[right+1] == nums[right]) {
-                            right--;
-                        }
+        sort(nums.begin(), nums.end());
+        vector<vector<int>> res;
+
+        for(int i=0;i<N-3;i++) {
+            if(i > 0 && nums[i] == nums[i-1]) continue;
+
+            for(int j=i+1;j<N-2;j++) {
+                if(j > i+1 && nums[j] == nums[j-1]) continue;
+
+                long long target = (long long)sum - ((long long)nums[i] + (long long)nums[j]);
+
+                int beg = j+1;
+                int end = N-1;
+
+                while(beg < end) {
+                    int tmp = nums[beg] + nums[end];
+
+                    if(tmp == target) {
+                        res.push_back({nums[i], nums[j], nums[beg], nums[end]});
+                        beg++;
+                        while(beg < N && nums[beg] == nums[beg-1]) beg++;
+                        end--;
+                        while(end >= 0 && nums[end] == nums[end+1]) end--;
+                    } else if(tmp < target) {
+                        beg++;
+                    } else {
+                        end--;
                     }
-                    
-                    if(nums[left] + nums[right] < target - nums[i] - nums[j]) left++;
-                    else right--;
                 }
-                
-                while(j < N - 2 && nums[j] == nums[j+1]) j++;
             }
-            
-            while(i < N - 1 && nums[i] == nums[i+1]) i++;
         }
         
         return res;
