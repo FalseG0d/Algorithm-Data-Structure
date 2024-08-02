@@ -1,29 +1,29 @@
 class Solution {
 public:
-    vector<vector<int>>res;
-    
-    void help(vector<int>& candidates, vector<int>temp, int cur, int target){
-        int N = candidates.size();
+    void solve(vector<int>& candidates, vector<vector<int>>& res, int target, int pos, vector<int> curr) {
+        if(pos == candidates.size()) return;
         
-        if(cur == N) return;
-        if(target < 0) return;
-        
-        if(target == 0){
-            res.push_back(temp);
+        if(target == candidates[pos]) {
+            curr.push_back(candidates[pos]);
+            res.push_back(curr);
+
             return;
         }
         
-        help(candidates, temp, cur + 1, target);
+        if(target < 0) return;
 
-        temp.push_back(candidates[cur]);
-        
-        help(candidates, temp, cur, target - candidates[cur]);
+        // Leave Current
+        solve(candidates, res, target, pos+1, curr);
+        // Keep Current & Stay Here
+        curr.push_back(candidates[pos]);
+        solve(candidates, res, target - candidates[pos], pos, curr);
     }
-    
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-        vector<int>temp;
-        help(candidates, temp, 0, target);
-        
+        vector<vector<int>>res;
+        sort(candidates.begin(), candidates.end());
+
+        solve(candidates, res, target, 0, {});
+
         return res;
     }
 };
