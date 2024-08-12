@@ -7,9 +7,6 @@ public:
         sort(nums.begin(), nums.end());
         reverse(nums.begin(), nums.end());
 
-        // for(int ele : nums) cout<<ele<<" ";
-        // cout<<"\n";
-
         vector<pair<int,int>>dp(N);
         for(int i=0;i<N;i++) dp[i] = make_pair(1, i);
 
@@ -22,10 +19,6 @@ public:
                 }
             }
         }
-
-        // for(pair<int,int>p: dp) {
-        //     cout<<p.first<<" "<<p.second<<"\n";
-        // }
 
         int maxEle = -1;
         int lstIdx = -1;
