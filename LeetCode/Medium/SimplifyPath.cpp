@@ -1,31 +1,30 @@
 class Solution {
 public:
     string simplifyPath(string path) {
-        int N = path.length();
-        
-        for(int i=0;i<N;i++) if(path[i] == '/') path[i] = ' ';
-        
+        std::replace(path.begin(), path.end(), '/', ' ');
         stringstream ss(path);
-        string str="";
-        
-        vector<string>tree;
-        
-        while(ss>>str){
-            if(str == ".." && tree.size() > 0) tree.pop_back();
-            else if(str == "." || str == "..") continue;
-            else tree.push_back(str);
-        }
-        
-        string res = "/";
-        auto itr = tree.begin();
-        N = tree.size();
-        
-        for(int i=0;i<N;i++){
-            res += tree[i];
 
-            if(i < N - 1) res += "/";
+        string curr = "";
+        deque<string>st;
+
+        while(ss>>curr) {
+            if(curr == "..") {
+                if(!st.empty()) st.pop_back();
+            } else {
+                if(curr == ".") continue;
+                st.push_back(curr);
+            }
         }
-        
+
+        string res = "";
+
+        while(!st.empty()) {
+            res += ("/" + st.front());
+            st.pop_front();
+        }
+
+        if(res.length() == 0) res = "/";
+
         return res;
     }
 };
