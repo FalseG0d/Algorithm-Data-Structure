@@ -1,54 +1,37 @@
 class Solution {
 public:
-    int strVal(string s){
-        if(s.length() > 1 && s[0] == '0') return 256;
+    vector<string> help(string& str, int len, int cnt) {
+        if(len <= 0) return {};
+        if(len > cnt * 3) return {};
         
-        stringstream ss(s);
-        
-        int x = 0;
-        ss>>x;
-        
-        return x;
-    }
+        if(cnt == 1) {
+            string curr = str.substr(0, len);
+            
+            if(stoi(curr) > 255) return {};
+            if(curr.length() > 1 && curr[0] == '0') return {};
+            
+            return {curr};
+        }
 
-    vector<string> restoreIpAddresses(string s) {
         vector<string> res;
-        
-        int N = s.length();
-        
-        for(int i=1;i<4;i++){
-            if(i >= N) continue;
-            string first = s.substr(0,i);
-            
-            if(first.length() > 3) continue;
-            if(strVal(first) >= 256) continue;
-            
-            for(int j=1;j<4;j++){
-                if(i+j+1 >= N) continue;
-                string second = s.substr(i,j);
-                
-                if(second.length() > 3) continue;
-                if(strVal(second) >= 256) continue;
-                
-                for(int k=1;k<4;k++){
-                    if(i+j+k >= N) continue;
-                    
-                    string third = s.substr(i+j,k);
-                    
-                    if(third.length() > 3) continue;
-                    if(strVal(third) >= 256) continue;
-                    
-                    string fourth = s.substr(i+j+k);
-                    
-                    if(fourth.length() > 3) continue;
-                    if(strVal(fourth) >= 256) continue;
 
-                    // cout<<first<<"."<<second<<"."<<third<<"."<<fourth<<"\n";
-                    res.push_back(first + "." + second + "." + third + "." + fourth);
-                }
+        for(int i=1;i<4;i++) {
+            if(len - i < 0) continue;
+
+            string curr = str.substr(len-i, i);
+
+            if(stoi(curr) > 255 || (curr.length() > 1 && curr[0] == '0')) continue;
+
+            vector<string>tmpRes = help(str, len-i, cnt-1);
+
+            for(string tmp: tmpRes) {
+                res.push_back(tmp + "." + curr);
             }
         }
-        
+
         return res;
+    }
+    vector<string> restoreIpAddresses(string s) {
+        return help(s, s.length(), 4);
     }
 };
