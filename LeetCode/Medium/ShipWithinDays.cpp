@@ -1,43 +1,46 @@
 class Solution {
-    public:
-        int shipWithinDays(vector<int>& weights, int days) {
-            int left = 0;
-            int right = 0;
-            
-            for(int i : weights){
-                left = max(left, i);
-                right += i;
-            }
+public:
+    int getDays(vector<int>& weights, int cap) {
+        int curr = cap;
+        int days = 1;
 
-            int mid;
-            int ans = right;
-            
-            while(left <= right){
-                mid = (left + right) / 2;
-                if(check(weights, days, mid)){
-                    ans = mid;
-                    right = mid - 1;
-                } else {
-                    left = mid + 1;
-                }
-            }
-            return ans;
-        }
-    
-        bool check(vector<int>& weights, int days, int capacity){
-            int requiredDays = 1;
-            int currWeight = 0;
+        int N = weights.size();
 
-            for(int i : weights){
-                if(currWeight + i > capacity){
-                    requiredDays++;
-                    currWeight = 0;
-                }
-                currWeight += i;
+        for(int i=0;i<N;i++) {
+            if(curr >= weights[i]) {
+                curr -= weights[i];
+            } else {
+                i--;
+                curr = cap;
+                days++;
             }
-            
-            if(requiredDays > days) return false;
-            
-            return true;
         }
-    };
+
+        return days;
+    }
+    int shipWithinDays(vector<int>& weights, int days) {
+        int maxCap = 0;
+        int minCap = -1;
+
+        int res = 1;
+
+        for(int ele: weights) {
+            maxCap += ele;
+            minCap = max(minCap, ele);
+        }
+
+        while(minCap <= maxCap) {
+            int mid = minCap + (maxCap - minCap) / 2;
+            int tmpDays = getDays(weights, mid);
+
+            if(tmpDays <= days) {
+                res = mid;
+                maxCap = mid-1;
+            } else {
+                minCap = mid+1;
+            }
+        }
+
+        return res;
+    }
+};
