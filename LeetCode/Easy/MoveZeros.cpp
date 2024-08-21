@@ -2,7 +2,6 @@ class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
         int N = nums.size();
-
         int itr1 = 0;
         int itr2 = 0;
 
