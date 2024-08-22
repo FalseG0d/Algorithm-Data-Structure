@@ -1,0 +1,22 @@
+class Solution {
+public:
+    vector<int> sortJumbled(vector<int>& mapping, vector<int>& nums) {
+        int N = nums.size();
+        vector<pair<int,int>>tmpNum(N);
+        vector<int> res(N);
+
+        for(int i=0;i<N;i++) {
+            string num = to_string(nums[i]);
+            for(int i=0;i<num.length();i++) {
+                num[i] = '0' + mapping[num[i] - '0'];
+            }
+
+            tmpNum[i] = make_pair(stoi(num), i);
+        }
+
+        sort(tmpNum.begin(), tmpNum.end());
+        for(int i=0;i<N;i++) res[i] = nums[tmpNum[i].second];
+
+        return res;
+    }
+};
