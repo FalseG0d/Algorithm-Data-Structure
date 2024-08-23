@@ -13,7 +13,7 @@ public:
 
             if(cnt % 3 == 1) res += (1 << i);
         }
-
+        
         return res;
     }
 };
