@@ -237,3 +237,9 @@ class Main() {
         Laptop wiredLP = new Laptop(new WiredKeyboard(), new WiredMouse());
     }
 };
+
+## System Design
+
+# Design Patterns
+
+Enhances managability, scalability and reusability
