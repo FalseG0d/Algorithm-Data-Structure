@@ -2,8 +2,6 @@
 
 A Child class will always extend the functionality of the Base class that is given, but sometimes two or more child classes will have the same functionality. This will lead to Code duplication. To avoid this we can use Strategy Design Pattern.
 
-So
-
 class Vehicle {
     void drive() {
 
