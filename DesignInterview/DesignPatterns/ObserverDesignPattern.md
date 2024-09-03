@@ -3,7 +3,6 @@
 1. Observable: Notifies all Obvservers that its state has changed
 2. Observer: Performs necessary operations when State Change is observed
 
-
 interface ObserverInterface {
     void update()
 }
