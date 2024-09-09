@@ -1,40 +1,40 @@
-class Solution {
-public:
-    bool search(vector<int>& nums, int target) {
-        int beg = 0;
-        int end = nums.size() - 1;
+int search(vector<int>& arr, int N, int k)
+{
+    // Write your code here.
+    // Return the position of K in ARR else return -1.
 
-        while(beg <= end) {
-            int mid = beg + (end - beg) / 2;
+    int beg = 0;
+    int end = N-1;
 
-            if(nums[mid] == target) return true;
+    while (beg <= end) {
+        int mid = beg + (end -  beg) / 2;
 
-            if(nums[mid] == nums[beg] && nums[mid] == nums[end]) {
-                beg++;
-                end--;
+        if (arr[mid] >= arr[beg]) {
+            // First part of the Array is sorted
 
-                continue;
-            }
+            if (k >= arr[beg] && k <= arr[mid]) {
+                // Binary Search in First Part
+                if(k == arr[mid]) return mid;
 
-            if(nums[mid] <= nums[end]) {
-                // Right Side is Sorted
-                if(target >= nums[mid] && target <= nums[end]) {
-                    // Target in Right Side
-                    beg = mid+1;
-                } else {
-                    end = mid-1;
-                }
+                end = mid;
             } else {
-                // Left Side is Sorted
-                if(target >= nums[beg] && target <= nums[mid]) {
-                    // Target in Left Side
-                    end = mid-1;
-                } else {
-                    beg = mid+1;
-                }
+                // Rotated Binary Search in Second Part
+                beg = mid+1;
+            }
+        } else {
+            // Second part of the Array is sorted
+            
+            if (k >= arr[mid] && k <= arr[end]) {
+                // Binary Search in Second Part
+                if(k == arr[mid]) return mid;
+
+                beg = mid;
+            } else {
+                // Rotated Binary Search in First Part
+                end = mid-1;
             }
         }
-
-        return false;
     }
-};
+
+    return -1;
+}
