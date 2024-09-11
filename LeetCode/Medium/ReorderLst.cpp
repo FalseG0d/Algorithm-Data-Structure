@@ -30,6 +30,7 @@ public:
         
         return itr;
     }
+
     void print(ListNode*itr){
         while(itr != NULL){
             cout<<itr->val<<"->";
@@ -38,6 +39,7 @@ public:
         
         cout<<"\n";
     }
+    
     void reorderList(ListNode* head) {
         int N = 0;
         ListNode*itr = head;
