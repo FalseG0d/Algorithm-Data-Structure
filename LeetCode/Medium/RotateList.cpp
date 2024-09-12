@@ -21,6 +21,7 @@ public:
         
         return res;
     }
+
     int getLast(ListNode* head){
         if(head == NULL) return -1000;
         if(head -> next == NULL) return -1000;
@@ -53,6 +54,7 @@ public:
         
         return help(newHead, k - 1);
     }
+    
     ListNode* rotateRight(ListNode* head, int k) {
         if(head == NULL) return head;
         
